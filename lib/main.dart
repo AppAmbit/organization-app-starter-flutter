@@ -14,6 +14,7 @@ import 'features/notifications/data/notifications_repository.dart';
 import 'features/notifications/models/notification_model.dart';
 import 'features/notifications/providers/notifications_providers.dart';
 import 'features/notifications/screens/notifications_screen.dart';
+import 'features/about/screens/about_screen.dart';
 import 'shared/widgets/snackbar_app_widget.dart';
 
 final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -112,7 +113,7 @@ class _AppShellState extends ConsumerState<AppShell> with WidgetsBindingObserver
   static const int _notificationsTabIndex = 3;
   int _selectedIndex = 0;
 
-  static const _pages = <Widget>[HomeScreen(), Center(child: Text('Categories')), Center(child: Text('Resources')), NotificationsScreen(), Center(child: Text('About'))];
+  static const _pages = <Widget>[HomeScreen(), Center(child: Text('Categories')), Center(child: Text('Resources')), NotificationsScreen(), AboutScreen()];
 
   @override
   void initState() {
