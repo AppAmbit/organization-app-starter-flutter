@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import '../../../../core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import '../models/collection_item.dart';
 
@@ -27,10 +28,10 @@ class LargeCard extends StatelessWidget {
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: Colors.white,
+          color: AppColors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.05),
+              color: AppColors.black.withValues(alpha: 0.05),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -51,8 +52,8 @@ class LargeCard extends StatelessWidget {
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.transparent,
-                      Colors.black.withValues(alpha: 0.1),
-                      Colors.black.withValues(alpha: 0.7),
+                      AppColors.black.withValues(alpha: 0.1),
+                      AppColors.black.withValues(alpha: 0.7),
                     ],
                     stops: const [0.0, 0.6, 1.0],
                   ),
@@ -76,13 +77,13 @@ class LargeCard extends StatelessWidget {
                           vertical: 4,
                         ),
                         decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.25),
+                          color: AppColors.white.withValues(alpha: 0.25),
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: Text(
                           data.badge!.toUpperCase(),
                           style: const TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 10,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 0.5,
@@ -95,7 +96,7 @@ class LargeCard extends StatelessWidget {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
-                          color: Colors.white,
+                          color: AppColors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           height: 1.25,
@@ -109,7 +110,7 @@ class LargeCard extends StatelessWidget {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          color: Colors.white.withValues(alpha: 0.8),
+                          color: AppColors.white.withValues(alpha: 0.8),
                           fontSize: 12,
                           height: 1.4,
                         ),
@@ -128,9 +129,9 @@ class LargeCard extends StatelessWidget {
     final imagePath = data.imageUrl ?? data.image;
     
     Widget placeholder() => Container(
-          color: Colors.grey[100],
+          color: AppColors.gray100,
           child: const Center(
-            child: Icon(Icons.image_not_supported_outlined, color: Colors.grey, size: 32),
+            child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500, size: 32),
           ),
         );
 
@@ -139,7 +140,7 @@ class LargeCard extends StatelessWidget {
         return CachedNetworkImage(
           imageUrl: imagePath,
           fit: BoxFit.cover,
-          placeholder: (context, url) => Container(color: Colors.grey[100]),
+          placeholder: (context, url) => Container(color: AppColors.gray100),
           errorWidget: (context, url, error) => placeholder(),
         );
       } else {

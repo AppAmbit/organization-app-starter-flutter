@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import '../../../../core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import '../models/collection_item.dart';
 
@@ -64,7 +65,7 @@ class SmallCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w500,
-                        color: Colors.grey[600],
+                        color: AppColors.gray600,
                       ),
                     ),
                   ],
@@ -81,9 +82,9 @@ class SmallCard extends StatelessWidget {
     final imagePath = data.imageUrl ?? data.image;
     
     Widget placeholder() => Container(
-          color: Colors.grey[100],
+          color: AppColors.gray100,
           child: const Center(
-            child: Icon(Icons.image_not_supported_outlined, color: Colors.grey, size: 24),
+            child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500, size: 24),
           ),
         );
 
@@ -92,7 +93,7 @@ class SmallCard extends StatelessWidget {
         return CachedNetworkImage(
           imageUrl: imagePath,
           fit: BoxFit.cover,
-          placeholder: (context, url) => Container(color: Colors.grey[100]),
+          placeholder: (context, url) => Container(color: AppColors.gray100),
           errorWidget: (context, url, error) => placeholder(),
         );
       } else {

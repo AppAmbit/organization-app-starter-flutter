@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import '../../../../core/styles/app_colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/connectivity_provider.dart';
 import '../providers/home_feed_providers.dart';
@@ -65,7 +66,7 @@ class HomeScreen extends ConsumerWidget {
                 const SliverAppBar(
                   floating: true,
                   title: Text('KavaUp'),
-                  backgroundColor: Colors.white,
+                  backgroundColor: AppColors.white,
                   elevation: 0,
                   centerTitle: true,
                 ),
@@ -101,7 +102,7 @@ class _NoInternetView extends StatelessWidget {
             Icon(
               Icons.wifi_off_rounded,
               size: 72,
-              color: Colors.grey[400],
+              color: AppColors.gray400,
             ),
             const SizedBox(height: 20),
             Text(
@@ -114,7 +115,7 @@ class _NoInternetView extends StatelessWidget {
             Text(
               'Check your connection and try again.',
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.grey[600], fontSize: 14),
+              style: TextStyle(color: AppColors.gray600, fontSize: 14),
             ),
             const SizedBox(height: 24),
             FilledButton.icon(
@@ -143,7 +144,7 @@ class _ErrorView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.error_outline_rounded, size: 64, color: Colors.grey[400]),
+            Icon(Icons.error_outline_rounded, size: 64, color: AppColors.gray400),
             const SizedBox(height: 16),
             Text(
               'Something went wrong',
@@ -155,7 +156,7 @@ class _ErrorView extends StatelessWidget {
             Text(
               'We couldn\'t load the feed. Please try again.',
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.grey[600], fontSize: 14),
+              style: TextStyle(color: AppColors.gray600, fontSize: 14),
             ),
             const SizedBox(height: 24),
             FilledButton.icon(
@@ -183,7 +184,7 @@ class _EmptyFeedView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.movie_filter_outlined, size: 72, color: Colors.grey[300]),
+            Icon(Icons.movie_filter_outlined, size: 72, color: AppColors.gray300),
             const SizedBox(height: 20),
             Text(
               'Nothing here yet',
@@ -195,7 +196,7 @@ class _EmptyFeedView extends StatelessWidget {
             Text(
               'Content will appear here once it\'s published.',
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.grey[500], fontSize: 14),
+              style: TextStyle(color: AppColors.gray500, fontSize: 14),
             ),
           ],
         ),

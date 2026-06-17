@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/styles/app_colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -18,7 +19,7 @@ class ContentDetailScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       body: CustomScrollView(
         slivers: [
           _buildSliverAppBar(context),
@@ -34,11 +35,11 @@ class ContentDetailScreen extends ConsumerWidget {
     return SliverAppBar(
       pinned: true,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      iconTheme: const IconThemeData(color: Colors.black),
+      iconTheme: const IconThemeData(color: AppColors.black),
       title: item.title != null 
           ? Text(
               item.title!, 
-              style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+              style: const TextStyle(color: AppColors.black, fontWeight: FontWeight.bold, fontSize: 18),
             ) 
           : const SizedBox.shrink(),
       centerTitle: true,
@@ -96,12 +97,12 @@ class ContentDetailScreen extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, size: 48, color: Colors.grey[400]),
+            Icon(icon, size: 48, color: AppColors.gray400),
             const SizedBox(height: 16),
             Text(
               message,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16, color: Colors.grey[600], height: 1.4),
+              style: TextStyle(fontSize: 16, color: AppColors.gray600, height: 1.4),
             ),
           ],
         ),
@@ -118,7 +119,7 @@ class ContentDetailScreen extends ConsumerWidget {
             if (block.text == null || block.text!.isEmpty) return const SizedBox.shrink();
             return HtmlWidget(
               block.text!,
-              textStyle: const TextStyle(fontSize: 16, height: 1.6, color: Colors.black87),
+              textStyle: const TextStyle(fontSize: 16, height: 1.6, color: AppColors.overlayDark),
             );
           case ContentBlockType.video:
             final videoUrlStr = block.bannerVideoUrl;
@@ -138,13 +139,13 @@ class ContentDetailScreen extends ConsumerWidget {
                 width: double.infinity,
                 placeholder: (context, url) => Container(
                   height: 200,
-                  color: Colors.grey[100],
+                  color: AppColors.gray100,
                   child: const Center(child: CircularProgressIndicator()),
                 ),
                 errorWidget: (context, url, error) => Container(
                   height: 200,
-                  color: Colors.grey[100],
-                  child: const Center(child: Icon(Icons.image_not_supported_outlined, color: Colors.grey)),
+                  color: AppColors.gray100,
+                  child: const Center(child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500)),
                 ),
               ),
             );
@@ -218,7 +219,7 @@ class _VideoBlockPlayerState extends State<_VideoBlockPlayer> {
         looping: false,
         errorBuilder: (context, errorMessage) {
           return const Center(
-            child: Icon(Icons.error_outline, color: Colors.white, size: 48),
+            child: Icon(Icons.error_outline, color: AppColors.white, size: 48),
           );
         },
       );
@@ -241,8 +242,8 @@ class _VideoBlockPlayerState extends State<_VideoBlockPlayer> {
       return AspectRatio(
         aspectRatio: 16 / 9,
         child: Container(
-          color: Colors.black87,
-          child: const Center(child: Icon(Icons.error_outline, color: Colors.white, size: 48)),
+          color: AppColors.overlayDark,
+          child: const Center(child: Icon(Icons.error_outline, color: AppColors.white, size: 48)),
         ),
       );
     }
@@ -256,8 +257,8 @@ class _VideoBlockPlayerState extends State<_VideoBlockPlayer> {
       return AspectRatio(
         aspectRatio: 16 / 9,
         child: Container(
-          color: Colors.black87,
-          child: const Center(child: CircularProgressIndicator(color: Colors.white)),
+          color: AppColors.overlayDark,
+          child: const Center(child: CircularProgressIndicator(color: AppColors.white)),
         ),
       );
     }

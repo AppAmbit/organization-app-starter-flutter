@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import '../../../../core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import '../models/collection_item.dart';
 
@@ -26,24 +27,24 @@ class FeaturedCard extends StatelessWidget {
                   ? CachedNetworkImage(
                       imageUrl: data.imageUrl ?? data.image!,
                       fit: BoxFit.cover,
-                      placeholder: (context, url) => Container(color: Colors.grey[100]),
+                      placeholder: (context, url) => Container(color: AppColors.gray100),
                       errorWidget: (context, url, error) => Container(
-                        color: Colors.grey[100],
-                        child: const Center(child: Icon(Icons.image_not_supported_outlined, color: Colors.grey, size: 48)),
+                        color: AppColors.gray100,
+                        child: const Center(child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500, size: 48)),
                       ),
                     )
                   : Image.asset(
                       'movies_example/${data.imageUrl ?? data.image!}',
                       fit: BoxFit.cover,
                       errorBuilder: (context, error, stackTrace) => Container(
-                        color: Colors.grey[100],
-                        child: const Center(child: Icon(Icons.image_not_supported_outlined, color: Colors.grey, size: 48)),
+                        color: AppColors.gray100,
+                        child: const Center(child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500, size: 48)),
                       ),
                     )
             else
               Container(
-                color: Colors.grey[100],
-                child: const Center(child: Icon(Icons.image_not_supported_outlined, color: Colors.grey, size: 48)),
+                color: AppColors.gray100,
+                child: const Center(child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500, size: 48)),
               ),
 
             // Premium Gradient overlay fading to white at the bottom
@@ -55,9 +56,9 @@ class FeaturedCard extends StatelessWidget {
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.transparent,
-                      Colors.black.withValues(alpha: 0.2),
-                      Colors.black.withValues(alpha: 0.7),
-                      Colors.white,
+                      AppColors.black.withValues(alpha: 0.2),
+                      AppColors.black.withValues(alpha: 0.7),
+                      AppColors.white,
                     ],
                     stops: const [0.0, 0.5, 0.85, 1.0],
                   ),
@@ -84,7 +85,7 @@ class FeaturedCard extends StatelessWidget {
                         child: Text(
                           data.badge!.toUpperCase(),
                           style: const TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 10,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 1.0,
@@ -99,7 +100,7 @@ class FeaturedCard extends StatelessWidget {
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: 28,
                         fontWeight: FontWeight.w900,
                         height: 1.1,
@@ -114,7 +115,7 @@ class FeaturedCard extends StatelessWidget {
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                        color: Colors.white.withValues(alpha: 0.8),
+                        color: AppColors.white.withValues(alpha: 0.8),
                         fontSize: 15,
                         height: 1.4,
                       ),

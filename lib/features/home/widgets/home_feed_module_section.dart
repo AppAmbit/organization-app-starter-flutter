@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/styles/app_colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/feed_collection.dart';
 import '../models/collection_item.dart';
@@ -45,7 +46,7 @@ class HomeFeedModuleSection extends ConsumerWidget {
                   style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w800,
-                    color: Colors.black,
+                    color: AppColors.black,
                     letterSpacing: -0.5,
                   ),
                 ),
@@ -53,7 +54,7 @@ class HomeFeedModuleSection extends ConsumerWidget {
                   const SizedBox(height: 2),
                   Text(
                     section.subtitle!,
-                    style: TextStyle(fontSize: 13, color: Colors.grey[600]),
+                    style: TextStyle(fontSize: 13, color: AppColors.gray600),
                   ),
                 ],
               ],
@@ -214,7 +215,7 @@ class _FeaturedCarouselState extends State<_FeaturedCarousel> {
                 decoration: BoxDecoration(
                   color: _currentPage == index
                       ? const Color(0xFF4338CA) // Blue/Indigo
-                      : Colors.grey[300],
+                      : AppColors.gray300,
                   shape: BoxShape.circle,
                 ),
               );
