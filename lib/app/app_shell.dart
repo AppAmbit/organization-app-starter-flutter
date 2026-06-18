@@ -73,7 +73,7 @@ class _AppShellState extends ConsumerState<AppShell>
         await PushNotificationsSdk.setNotificationsEnabled(true);
       } else {
         SnackBarAppWidget.show(
-          'Para recibir alertas importantes, habilita notificaciones.',
+          'Enable notifications to receive important alerts.',
           type: SnackBarType.warning,
         );
       }
