@@ -33,6 +33,7 @@ class CollectionItem {
   /// Media convention: the backend generates `image_url` (full URL) alongside
   /// `image` (raw filename). We always prioritize `image_url`.
   factory CollectionItem.fromMap(Map<String, dynamic> map) {
+    final resolvedContentId = cmsResolveContentId(map);
     return CollectionItem(
       id: cmsFallbackId(map),
       lookupKey: map['lookup_key']?.toString() ?? '',
@@ -42,7 +43,7 @@ class CollectionItem {
       image: map['image'] as String?,
       badge: map['badge'] as String?,
       body: map['body'] as String?,
-      contentId: cmsResolveContentId(map),
+      contentId: resolvedContentId,
     );
   }
 

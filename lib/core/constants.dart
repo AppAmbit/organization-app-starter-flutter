@@ -8,6 +8,7 @@ class AppConstants {
 class CmsContentType {
   static const String feedCarousel = 'feed_carousel';
   static const String contentDetails = 'content_details';
+  static const String contentDetailItems = 'content_detail_items';
 }
 
 class ContentBlockType {

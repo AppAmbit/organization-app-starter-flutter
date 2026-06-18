@@ -51,8 +51,7 @@ class ContentDetailScreen extends ConsumerWidget {
 
   Widget _buildBody(BuildContext context, WidgetRef ref) {
     if (item.contentId == null) {
-      return _buildCenteredMessage(
-          context, Icons.info_outline, 'Content not available.');
+      return _buildInlineContent(context);
     }
 
     final asyncDetail = ref.watch(contentDetailProvider(item.contentId!));
@@ -60,8 +59,7 @@ class ContentDetailScreen extends ConsumerWidget {
     return asyncDetail.when(
       data: (detail) {
         if (detail == null || detail.contentBlocks.isEmpty) {
-          return _buildCenteredMessage(
-              context, Icons.search_off, 'Content not found.');
+          return _buildInlineContent(context);
         }
         return Center(
           child: ConstrainedBox(
@@ -85,13 +83,31 @@ class ContentDetailScreen extends ConsumerWidget {
       ),
       error: (error, stack) {
         debugPrint('[ContentDetail] Error: $error\n$stack');
-        return _buildCenteredMessage(
-          context,
-          Icons.wifi_off_rounded,
-          'Connection error.\nCould not load content.',
-        );
+        return _buildInlineContent(context);
       },
     );
+  }
+
+  Widget _buildInlineContent(BuildContext context) {
+    final legacy = item.body ?? item.subtitle;
+    if (legacy != null && legacy.isNotEmpty) {
+      return Center(
+        child: ConstrainedBox(
+          constraints:
+              const BoxConstraints(maxWidth: AppLayout.contentMaxWidth),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: HtmlWidget(
+              legacy,
+              textStyle: const TextStyle(
+                  fontSize: 16, height: 1.6, color: AppColors.overlayDark),
+            ),
+          ),
+        ),
+      );
+    }
+    return _buildCenteredMessage(
+        context, Icons.info_outline, 'Content not available.');
   }
 
   Widget _buildCenteredMessage(
@@ -142,7 +158,7 @@ class ContentDetailScreen extends ConsumerWidget {
           child: AppVideoPlayer(url: videoUrl),
         );
       case ContentBlockType.image:
-        final imageUrl = block.bannerImageUrl;
+        final imageUrl = block.bannerImageUrl ?? block.bannerImage;
         if (imageUrl == null || imageUrl.isEmpty) return const SizedBox.shrink();
         return ClipRRect(
           borderRadius: BorderRadius.circular(16),

@@ -44,19 +44,55 @@ final homeFeedSectionsProvider = FutureProvider<List<FeedCollection>>((
 });
 
 /// Fetches a specific [ContentDetail] by its ID.
+///
+/// Resolves content blocks via 2-step CMS fetch:
+/// 1. Fetch `content_details` record (contains entry_id references in `.content`)
+/// 2. Fetch `content_detail_items` records matching unresolved entry_ids
 final contentDetailProvider = FutureProvider.family<ContentDetail?, String>((ref, id) async {
   try {
     debugPrint('[ContentDetail] Fetching details for ID: $id');
-    final details = await AppAmbitCms.content<ContentDetail>(
-      CmsContentType.contentDetails,
-      fromJson: (json) => ContentDetail.fromMap(json),
-    ).equals('id', id).getList();
 
-    if (details.isEmpty) {
-      debugPrint('[ContentDetail] No detail found for ID: $id');
+    // SDK filter-by-id not supported for content_details; fetch all and match in Dart.
+    // Same approach as React Native reference implementation.
+    final allDetails = await AppAmbitCms.content<Map<String, dynamic>>(
+      CmsContentType.contentDetails,
+      fromJson: (json) => Map<String, dynamic>.from(json),
+    ).getList();
+
+    final rawDetail = allDetails.where((e) => e['id']?.toString() == id).firstOrNull;
+    if (rawDetail == null) {
+      debugPrint('[ContentDetail] No content_details record for ID: $id');
       return null;
     }
-    return details.first;
+
+    final partial = ContentDetail.fromMap(rawDetail);
+    final blocks = List<ContentDetailBlock>.of(partial.contentBlocks);
+
+    if (partial.unresolvedContentIds.isNotEmpty) {
+      // entry_id stubs in content array — resolve against content_detail_items
+      final allItems = await AppAmbitCms.content<Map<String, dynamic>>(
+        CmsContentType.contentDetailItems,
+        fromJson: (json) => Map<String, dynamic>.from(json),
+      ).getList();
+
+      final wantedIds = partial.unresolvedContentIds.toSet();
+      final byId = <String, Map<String, dynamic>>{};
+      for (final item in allItems) {
+        final itemId = item['id']?.toString() ?? '';
+        if (wantedIds.contains(itemId)) byId[itemId] = item;
+      }
+      for (final entryId in partial.unresolvedContentIds) {
+        final found = byId[entryId];
+        if (found != null) blocks.add(ContentDetailBlock.fromMap(found));
+      }
+      debugPrint('[ContentDetail] resolved ${blocks.length} blocks for id=$id');
+    }
+
+    return ContentDetail(
+      id: partial.id,
+      title: partial.title,
+      contentBlocks: blocks,
+    );
   } catch (e, st) {
     debugPrint('[ContentDetail] ERROR loading detail $id: $e\n$st');
     rethrow;
