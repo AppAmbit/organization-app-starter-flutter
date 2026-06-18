@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../core/styles/app_colors.dart';
-import '../models/notification_icons.dart';
-import '../models/notification_model.dart';
+import 'package:organization_app_starter/core/styles/app_colors.dart';
+import 'package:organization_app_starter/features/notifications/models/notification_icons.dart';
+import 'package:organization_app_starter/features/notifications/models/notification_model.dart';
 
 class NotificationTile extends StatelessWidget {
   final NotificationModel notification;
@@ -15,18 +15,11 @@ class NotificationTile extends StatelessWidget {
       onTap: onTap,
       behavior: HitTestBehavior.opaque,
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: AppColors.white,
-          border: const Border(
+          border: Border(
             bottom: BorderSide(color: AppColors.notificationBorder, width: 1),
           ),
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.black.withValues(alpha: 0.08),
-              offset: const Offset(0, 1),
-              blurRadius: 4,
-            ),
-          ],
         ),
         child: Stack(
           children: [

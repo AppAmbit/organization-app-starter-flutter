@@ -35,4 +35,11 @@ class AppColors {
   static const Color notificationBorder = Color(0xFFDBEAFE);
   static const Color notificationIconBg = Color(0xFF2563EB);
   static const Color badgeRed = Color(0xFFFF3B30);
+
+  // Carousel
+  static const Color carouselDotActive = accent;
+  static const Color carouselDotInactive = gray300;
+
+  // Buttons
+  static const Color buttonDefault = accent;
 }

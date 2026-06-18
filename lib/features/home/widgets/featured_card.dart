@@ -1,7 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import '../../../../core/styles/app_colors.dart';
+import 'package:organization_app_starter/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
-import '../models/collection_item.dart';
+import 'package:organization_app_starter/features/home/models/collection_item.dart';
+import 'card_image.dart';
 
 
 /// Full-bleed hero card for the featured PageView carousel.
@@ -22,30 +22,7 @@ class FeaturedCard extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             // Background Image
-            if (data.imageUrl != null || data.image != null)
-              (data.imageUrl ?? data.image!).startsWith('http')
-                  ? CachedNetworkImage(
-                      imageUrl: data.imageUrl ?? data.image!,
-                      fit: BoxFit.cover,
-                      placeholder: (context, url) => Container(color: AppColors.gray100),
-                      errorWidget: (context, url, error) => Container(
-                        color: AppColors.gray100,
-                        child: const Center(child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500, size: 48)),
-                      ),
-                    )
-                  : Image.asset(
-                      'movies_example/${data.imageUrl ?? data.image!}',
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) => Container(
-                        color: AppColors.gray100,
-                        child: const Center(child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500, size: 48)),
-                      ),
-                    )
-            else
-              Container(
-                color: AppColors.gray100,
-                child: const Center(child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500, size: 48)),
-              ),
+            CardImage(imageUrl: data.imageUrl, imagePath: data.image),
 
             // Premium Gradient overlay fading to white at the bottom
             Positioned.fill(

@@ -1,10 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:appambit_sdk_push_notifications/appambit_sdk_push_notifications.dart';
 
-import '../../../shared/widgets/snackbar_app_widget.dart';
-import '../data/ios_notification_bridge.dart';
-import '../data/notifications_repository.dart';
-import '../models/notification_model.dart';
+import 'package:organization_app_starter/features/notifications/data/ios_notification_bridge.dart';
+import 'package:organization_app_starter/features/notifications/data/notifications_repository.dart';
+import 'package:organization_app_starter/features/notifications/models/notification_model.dart';
 
 final notificationsRepositoryProvider =
     Provider<NotificationsRepository>((ref) => NotificationsRepository());
@@ -44,14 +43,6 @@ class NotificationsNotifier extends AsyncNotifier<List<NotificationModel>> {
     state = AsyncData(await _repo.markAllRead());
   }
 
-  Future<void> delete(String id) async {
-    state = AsyncData(await _repo.delete(id));
-  }
-
-  Future<void> clear() async {
-    state = AsyncData(await _repo.clear());
-  }
-
   /// Re-reads persisted state and drains any iOS NSE entries. Call on resume.
   Future<void> reload() async {
     state = AsyncData(await _loadAndDrain());
@@ -80,54 +71,8 @@ class PushEnabledNotifier extends AsyncNotifier<bool> {
   Future<bool> build() => PushNotificationsSdk.isNotificationsEnabled();
 
   Future<void> toggle(bool enabled) async {
-    if (!enabled) {
-      await PushNotificationsSdk.setNotificationsEnabled(false);
-      final applied = await PushNotificationsSdk.isNotificationsEnabled();
-      state = AsyncData(applied);
-      if (!applied) {
-        SnackBarAppWidget.show(
-          'Notificaciones deshabilitadas.',
-          type: SnackBarType.info,
-        );
-      } else {
-        SnackBarAppWidget.show(
-          'No se pudo deshabilitar notificaciones. Intenta de nuevo.',
-          type: SnackBarType.error,
-        );
-      }
-      return;
-    }
-
-    final hasPermission = await PushNotificationsSdk.hasNotificationPermission();
-    if (!hasPermission) {
-      bool isGranted = false;
-      await PushNotificationsSdk.requestNotificationPermission(
-        callback: (granted) => isGranted = granted,
-      );
-      if (!isGranted) {
-        state = AsyncData(false);
-        SnackBarAppWidget.show(
-          'Para habilitarlas, acepta permisos de notificaciones.',
-          type: SnackBarType.warning,
-        );
-        return;
-      }
-    }
-
-    await PushNotificationsSdk.setNotificationsEnabled(true);
-    final applied = await PushNotificationsSdk.isNotificationsEnabled();
-    state = AsyncData(applied);
-    if (applied) {
-      SnackBarAppWidget.show(
-        'Notificaciones habilitadas correctamente.',
-        type: SnackBarType.success,
-      );
-    } else {
-      SnackBarAppWidget.show(
-        'No se pudo habilitar notificaciones. Intenta de nuevo.',
-        type: SnackBarType.error,
-      );
-    }
+    await PushNotificationsSdk.setNotificationsEnabled(enabled);
+    state = AsyncData(enabled);
   }
 }
 

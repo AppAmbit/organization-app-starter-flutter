@@ -1,8 +1,9 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import '../models/notification_model.dart';
+import 'package:organization_app_starter/features/notifications/models/notification_model.dart';
 
 /// Bridges the iOS Notification Service Extension to the Flutter app.
 ///
@@ -28,9 +29,11 @@ class IosNotificationBridge {
           .map((m) => NotificationModel.fromMap(
               m.map((k, v) => MapEntry(k.toString(), v))))
           .toList();
-    } on PlatformException {
+    } on PlatformException catch (e) {
+      debugPrint('[IosNotificationBridge] PlatformException: $e');
       return const [];
-    } on MissingPluginException {
+    } on MissingPluginException catch (e) {
+      debugPrint('[IosNotificationBridge] MissingPluginException: $e');
       return const [];
     }
   }

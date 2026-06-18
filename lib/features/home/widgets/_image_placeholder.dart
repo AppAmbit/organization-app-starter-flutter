@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../core/styles/app_colors.dart';
+import 'package:organization_app_starter/core/styles/app_colors.dart';
 
 /// Neutral placeholder shown when a card has no image or the image fails to load.
 /// Uses a soft grey background with a centered movie icon.

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import '../../../../core/styles/app_colors.dart';
+import 'package:organization_app_starter/core/constants.dart';
+import 'package:organization_app_starter/core/styles/app_colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../providers/connectivity_provider.dart';
-import '../providers/home_feed_providers.dart';
-import '../widgets/home_feed_module_section.dart';
-import '../../../main.dart';
+import 'package:organization_app_starter/features/home/providers/connectivity_provider.dart';
+import 'package:organization_app_starter/features/home/providers/home_feed_providers.dart';
+import 'package:organization_app_starter/features/home/widgets/home_feed_module_section.dart';
+import 'package:organization_app_starter/app/app_providers.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // Check connectivity first — only shown once at open
     final connectivityAsync = ref.watch(connectivityProvider);
     final sectionsAsync = ref.watch(homeFeedSectionsProvider);
 
@@ -22,11 +22,16 @@ class HomeScreen extends ConsumerWidget {
         error: (e, st) => _buildFeedContent(context, ref, sectionsAsync),
         data: (hasConnection) {
           if (!hasConnection) {
-            return _NoInternetView(
+            return _FeedStateView(
+              icon: Icons.wifi_off_rounded,
+              iconSize: 72,
+              title: 'No Internet Connection',
+              subtitle: 'Check your connection and try again.',
               onRetry: () {
                 ref.invalidate(connectivityProvider);
                 ref.invalidate(homeFeedSectionsProvider);
               },
+              retryLabel: 'Try Again',
             );
           }
           return _buildFeedContent(context, ref, sectionsAsync);
@@ -42,11 +47,23 @@ class HomeScreen extends ConsumerWidget {
   ) {
     return sectionsAsync.when(
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (error, stack) => _ErrorView(
+      error: (error, stack) => _FeedStateView(
+        icon: Icons.error_outline_rounded,
+        iconSize: 64,
+        title: 'Something went wrong',
+        subtitle: "We couldn't load the feed. Please try again.",
         onRetry: () => ref.invalidate(homeFeedSectionsProvider),
+        retryLabel: 'Retry',
       ),
       data: (sections) {
-        if (sections.isEmpty) return const _EmptyFeedView();
+        if (sections.isEmpty) {
+          return const _FeedStateView(
+            icon: Icons.movie_filter_outlined,
+            iconSize: 72,
+            title: 'Nothing here yet',
+            subtitle: 'Content will appear here once it\'s published.',
+          );
+        }
 
         return NotificationListener<UserScrollNotification>(
           onNotification: (notification) {
@@ -56,7 +73,7 @@ class HomeScreen extends ConsumerWidget {
             } else if (notification.direction == ScrollDirection.forward) {
               if (!isVisible) ref.read(bottomBarVisibleProvider.notifier).show();
             }
-            return false; // let the notification bubble up
+            return false;
           },
           child: RefreshIndicator(
             onRefresh: () async => ref.invalidate(homeFeedSectionsProvider),
@@ -65,14 +82,15 @@ class HomeScreen extends ConsumerWidget {
               slivers: [
                 const SliverAppBar(
                   floating: true,
-                  title: Text('KavaUp'),
+                  title: Text(AppConstants.appTitle),
                   backgroundColor: AppColors.white,
                   elevation: 0,
                   centerTitle: true,
                 ),
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
-                    (context, index) => HomeFeedModuleSection(section: sections[index]),
+                    (context, index) =>
+                        HomeFeedModuleSection(section: sections[index]),
                     childCount: sections.length,
                   ),
                 ),
@@ -85,11 +103,23 @@ class HomeScreen extends ConsumerWidget {
   }
 }
 
-/// ─── No Internet ────────────────────────────────────────────────────────────
+/// Shared empty/error state widget — icon + title + subtitle + optional retry.
+class _FeedStateView extends StatelessWidget {
+  final IconData icon;
+  final double iconSize;
+  final String title;
+  final String subtitle;
+  final VoidCallback? onRetry;
+  final String? retryLabel;
 
-class _NoInternetView extends StatelessWidget {
-  final VoidCallback onRetry;
-  const _NoInternetView({required this.onRetry});
+  const _FeedStateView({
+    required this.icon,
+    required this.iconSize,
+    required this.title,
+    required this.subtitle,
+    this.onRetry,
+    this.retryLabel,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -99,105 +129,29 @@ class _NoInternetView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(
-              Icons.wifi_off_rounded,
-              size: 72,
-              color: AppColors.gray400,
-            ),
+            Icon(icon, size: iconSize, color: AppColors.gray400),
             const SizedBox(height: 20),
             Text(
-              'No Internet Connection',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+              title,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge
+                  ?.copyWith(fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             Text(
-              'Check your connection and try again.',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: AppColors.gray600, fontSize: 14),
-            ),
-            const SizedBox(height: 24),
-            FilledButton.icon(
-              onPressed: onRetry,
-              icon: const Icon(Icons.refresh_rounded),
-              label: const Text('Try Again'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/// ─── Error ──────────────────────────────────────────────────────────────────
-
-class _ErrorView extends StatelessWidget {
-  final VoidCallback onRetry;
-  const _ErrorView({required this.onRetry});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.error_outline_rounded, size: 64, color: AppColors.gray400),
-            const SizedBox(height: 16),
-            Text(
-              'Something went wrong',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'We couldn\'t load the feed. Please try again.',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: AppColors.gray600, fontSize: 14),
-            ),
-            const SizedBox(height: 24),
-            FilledButton.icon(
-              onPressed: onRetry,
-              icon: const Icon(Icons.refresh_rounded),
-              label: const Text('Retry'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/// ─── Empty Feed ─────────────────────────────────────────────────────────────
-
-class _EmptyFeedView extends StatelessWidget {
-  const _EmptyFeedView();
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.movie_filter_outlined, size: 72, color: AppColors.gray300),
-            const SizedBox(height: 20),
-            Text(
-              'Nothing here yet',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Content will appear here once it\'s published.',
+              subtitle,
               textAlign: TextAlign.center,
               style: TextStyle(color: AppColors.gray500, fontSize: 14),
             ),
+            if (onRetry != null) ...[
+              const SizedBox(height: 24),
+              FilledButton.icon(
+                onPressed: onRetry,
+                icon: const Icon(Icons.refresh_rounded),
+                label: Text(retryLabel ?? 'Retry'),
+              ),
+            ],
           ],
         ),
       ),

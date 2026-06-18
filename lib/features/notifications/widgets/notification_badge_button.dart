@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../core/styles/app_colors.dart';
-import '../screens/notifications_screen.dart';
+import 'package:organization_app_starter/core/styles/app_colors.dart';
+import 'package:organization_app_starter/features/notifications/screens/notifications_screen.dart';
 
 class NotificationBadgeButton extends StatelessWidget {
   final int unreadCount;

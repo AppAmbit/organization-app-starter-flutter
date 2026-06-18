@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../core/styles/app_colors.dart';
-import '../../main.dart';
-import '../domain/enums/data_general.dart';
+import 'package:organization_app_starter/core/styles/app_colors.dart';
+import 'package:organization_app_starter/main.dart';
+import 'package:organization_app_starter/shared/domain/enums/data_general.dart';
 
 export '../domain/enums/data_general.dart';
 

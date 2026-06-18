@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:appambit_sdk_flutter/appambit_sdk_flutter.dart';
-import '../../../core/styles/app_colors.dart';
-import '../models/about_data.dart';
+import 'package:organization_app_starter/core/styles/app_colors.dart';
+import 'package:organization_app_starter/shared/services/analytics_service.dart';
+import 'package:organization_app_starter/shared/services/url_launcher_service.dart';
+import 'package:organization_app_starter/features/about/models/about_data.dart';
 
 class AboutScreen extends ConsumerWidget {
   const AboutScreen({super.key});
@@ -113,14 +113,8 @@ class AboutScreen extends ConsumerWidget {
     String label,
     WidgetRef ref,
   ) async {
-    AppAmbitSdk.trackEvent('Resource Opened', {
-      'url': url,
-      'label': label,
-    });
-    final uri = Uri.tryParse(url);
-    if (uri != null && await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
-    }
+    AnalyticsService.trackResourceOpened(url: url, label: label);
+    await UrlLauncherService.launch(url);
   }
 }
 

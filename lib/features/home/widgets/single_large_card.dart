@@ -1,7 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import '../../../../core/styles/app_colors.dart';
+import 'package:organization_app_starter/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
-import '../models/collection_item.dart';
+import 'package:organization_app_starter/features/home/models/collection_item.dart';
+import 'card_image.dart';
 
 class SingleLargeCard extends StatelessWidget {
   final CollectionItem data;
@@ -36,7 +36,7 @@ class SingleLargeCard extends StatelessWidget {
           fit: StackFit.expand,
           children: [
             // Background Image
-            _buildImage(context),
+            CardImage(imageUrl: data.imageUrl, imagePath: data.image),
 
             // Gradient overlay
             Positioned.fill(
@@ -120,32 +120,4 @@ class SingleLargeCard extends StatelessWidget {
     );
   }
 
-  Widget _buildImage(BuildContext context) {
-    final imagePath = data.imageUrl ?? data.image;
-    
-    Widget placeholder() => Container(
-          color: AppColors.gray100,
-          child: const Center(
-            child: Icon(Icons.image_not_supported_outlined, color: AppColors.gray500, size: 48),
-          ),
-        );
-
-    if (imagePath != null) {
-      if (imagePath.startsWith('http')) {
-        return CachedNetworkImage(
-          imageUrl: imagePath,
-          fit: BoxFit.cover,
-          placeholder: (context, url) => Container(color: AppColors.gray100),
-          errorWidget: (context, url, error) => placeholder(),
-        );
-      } else {
-        return Image.asset(
-          'movies_example/$imagePath',
-          fit: BoxFit.cover,
-          errorBuilder: (context, error, stackTrace) => placeholder(),
-        );
-      }
-    }
-    return placeholder();
-  }
 }

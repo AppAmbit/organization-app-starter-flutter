@@ -1,4 +1,4 @@
-import '../../../core/constants.dart';
+import 'package:organization_app_starter/core/constants.dart';
 
 class ContentDetailBlock {
   final String id;

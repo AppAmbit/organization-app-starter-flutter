@@ -1,10 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:appambit_sdk_flutter/appambit_cms.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../core/constants.dart';
-import '../models/feed_collection.dart';
-import '../models/collection_item.dart';
-import '../models/content_detail.dart';
+import 'package:organization_app_starter/core/constants.dart';
+import 'package:organization_app_starter/features/home/models/feed_collection.dart';
+import 'package:organization_app_starter/features/home/models/content_detail.dart';
 
 /// Fetches all feed_collection records (parent sections), sorted by display_order.
 ///
@@ -43,19 +42,6 @@ final homeFeedSectionsProvider = FutureProvider<List<FeedCollection>>((
     rethrow;
   }
 });
-
-/// Returns the renderable [CollectionItem]s for a given [FeedCollection] section.
-///
-/// - `isCollection == true`  → returns the child collection items
-/// - `isCollection == false` → wraps the parent itself as a single item
-final sectionItemsProvider =
-    Provider.family<List<CollectionItem>, FeedCollection>((ref, section) {
-      final items = section.items;
-      debugPrint(
-        '[HomeFeed] Section "${section.lookupKey}" → ${items.length} items',
-      );
-      return items;
-    });
 
 /// Fetches a specific [ContentDetail] by its ID.
 final contentDetailProvider = FutureProvider.family<ContentDetail?, String>((ref, id) async {

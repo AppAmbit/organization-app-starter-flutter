@@ -1,35 +1,28 @@
 import 'package:flutter/material.dart';
-import '../../../../core/styles/app_colors.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../models/feed_collection.dart';
-import '../models/collection_item.dart';
-import '../providers/home_feed_providers.dart';
+import 'package:organization_app_starter/core/constants.dart';
+import 'package:organization_app_starter/core/styles/app_colors.dart';
+import 'package:organization_app_starter/shared/services/navigation_service.dart';
+import 'package:organization_app_starter/features/home/models/feed_collection.dart';
+import 'package:organization_app_starter/features/home/models/collection_item.dart';
 import 'featured_card.dart';
 import 'large_card.dart';
-
 import 'small_card.dart';
-import '../screens/content_detail_screen.dart';
 
 /// Renders a single Home Feed section — section header + horizontal carousel.
 ///
-/// Receives a [FeedCollection] (parent record).
-/// Uses [sectionItemsProvider] to resolve the renderable [CollectionItem]s:
+/// Receives a [FeedCollection] and uses [FeedCollection.items] directly:
 /// - `is_collection: true`  → child items from `collection[]`
 /// - `is_collection: false` → the parent itself wrapped as a single item
-class HomeFeedModuleSection extends ConsumerWidget {
+class HomeFeedModuleSection extends StatelessWidget {
   final FeedCollection section;
 
   const HomeFeedModuleSection({super.key, required this.section});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final items = ref.watch(sectionItemsProvider(section));
+  Widget build(BuildContext context) {
+    final items = section.items;
     if (items.isEmpty) return const SizedBox.shrink();
 
-    return _buildSection(context, items);
-  }
-
-  Widget _buildSection(BuildContext context, List<CollectionItem> items) {
     final showHeader = section.isCollection && section.title != null;
 
     return Column(
@@ -60,21 +53,9 @@ class HomeFeedModuleSection extends ConsumerWidget {
               ],
             ),
           ),
-
         const SizedBox(height: 10),
-
         _buildCarousel(context, items),
       ],
-    );
-  }
-
-  void _handleCardTap(BuildContext context, CollectionItem item) {
-    debugPrint('[HomeFeed] Card tapped: ${item.lookupKey} (${item.id})');
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => ContentDetailScreen(item: item),
-        fullscreenDialog: true,
-      ),
     );
   }
 
@@ -85,34 +66,32 @@ class HomeFeedModuleSection extends ConsumerWidget {
       case CardType.featured:
         return _FeaturedCarousel(
           items: items,
-          onTap: (item) => _handleCardTap(context, item),
+          onTap: (item) => NavigationService.openContentDetail(context, item),
         );
       case CardType.large:
-        final bool isTablet = screenWidth >= 600;
+        final bool isTablet = screenWidth >= AppLayout.tabletBreakpoint;
         final double defaultCardWidth = isTablet ? 400.0 : screenWidth * 0.85;
 
         if (items.length == 1) {
-          final double singleWidth = screenWidth - 40; // Full width minus 20px padding on each side
-          final double cardHeight = singleWidth * 0.6; // Horizontal aspect ratio
-
+          final double singleWidth = screenWidth - 40;
+          final double cardHeight = singleWidth * 0.6;
           return SizedBox(
-            height: cardHeight + 20, // Add space for shadow
+            height: cardHeight + 20,
             width: double.infinity,
             child: Center(
               child: LargeCard(
                 data: items.first,
                 width: singleWidth,
                 margin: EdgeInsets.zero,
-                onTap: () => _handleCardTap(context, items.first),
+                onTap: () => NavigationService.openContentDetail(context, items.first),
               ),
             ),
           );
         }
 
-        final double cardHeight = defaultCardWidth * 0.6; // Horizontal aspect ratio
-
+        final double cardHeight = defaultCardWidth * 0.6;
         return SizedBox(
-          height: cardHeight + 20, // Add space for shadow
+          height: cardHeight + 20,
           child: ListView.builder(
             clipBehavior: Clip.none,
             scrollDirection: Axis.horizontal,
@@ -122,14 +101,14 @@ class HomeFeedModuleSection extends ConsumerWidget {
             itemBuilder: (context, index) => LargeCard(
               data: items[index],
               width: defaultCardWidth,
-              onTap: () => _handleCardTap(context, items[index]),
+              onTap: () => NavigationService.openContentDetail(context, items[index]),
             ),
           ),
         );
       case CardType.small:
-        final bool isTablet = screenWidth >= 600;
+        final bool isTablet = screenWidth >= AppLayout.tabletBreakpoint;
         final double cardWidth = isTablet ? 220.0 : 160.0;
-        final double cardHeight = (cardWidth * 9 / 16) + 70; // Image height + text space
+        final double cardHeight = (cardWidth * 9 / 16) + 70;
 
         if (items.length == 1) {
           return SizedBox(
@@ -139,7 +118,7 @@ class HomeFeedModuleSection extends ConsumerWidget {
               child: SmallCard(
                 data: items.first,
                 margin: EdgeInsets.zero,
-                onTap: () => _handleCardTap(context, items.first),
+                onTap: () => NavigationService.openContentDetail(context, items.first),
               ),
             ),
           );
@@ -155,7 +134,7 @@ class HomeFeedModuleSection extends ConsumerWidget {
             itemCount: items.length,
             itemBuilder: (context, index) => SmallCard(
               data: items[index],
-              onTap: () => _handleCardTap(context, items[index]),
+              onTap: () => NavigationService.openContentDetail(context, items[index]),
             ),
           ),
         );
@@ -163,7 +142,6 @@ class HomeFeedModuleSection extends ConsumerWidget {
   }
 }
 
-/// PageView carousel for featured cards with page indicator dots.
 class _FeaturedCarousel extends StatefulWidget {
   final List<CollectionItem> items;
   final void Function(CollectionItem item)? onTap;
@@ -214,8 +192,8 @@ class _FeaturedCarouselState extends State<_FeaturedCarousel> {
                 height: 6,
                 decoration: BoxDecoration(
                   color: _currentPage == index
-                      ? const Color(0xFF4338CA) // Blue/Indigo
-                      : AppColors.gray300,
+                      ? AppColors.carouselDotActive
+                      : AppColors.carouselDotInactive,
                   shape: BoxShape.circle,
                 ),
               );
