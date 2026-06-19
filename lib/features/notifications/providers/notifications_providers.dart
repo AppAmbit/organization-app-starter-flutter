@@ -32,6 +32,14 @@ class NotificationsNotifier extends AsyncNotifier<List<NotificationModel>> {
   }
 
   Future<void> add(NotificationModel item) async {
+    final current = state.asData?.value ?? [];
+    final existing = current.where((e) => e.id == item.id).firstOrNull;
+    if (existing != null) {
+      item = item.copyWith(
+        read: item.read || existing.read,
+        receivedAt: existing.receivedAt,
+      );
+    }
     state = AsyncData(await _repo.upsert(item));
   }
 
@@ -43,7 +51,18 @@ class NotificationsNotifier extends AsyncNotifier<List<NotificationModel>> {
     state = AsyncData(await _repo.markAllRead());
   }
 
-  /// Re-reads persisted state and drains any iOS NSE entries. Call on resume.
+  /// Re-reads persisted state and drains any pending NSE items. Call on resume.
+  ///
+  /// Background notifications are NOT delivered via
+  /// [PushNotificationsSdk.setForegroundListener] — that listener only fires for
+  /// pushes received while the app is actively in the foreground. The NSE queue
+  /// (iOS) and the background isolate (Android) are the only paths that capture
+  /// background pushes, so we must drain them here.
+  ///
+  /// Duplication is prevented by [NotificationModel.contentFallbackId] which
+  /// generates identical ids on both the NSE (Swift) and Dart sides, keeping
+  /// [NotificationsRepository.upsert] idempotent even when the foreground
+  /// listener and this drain process the same notification concurrently.
   Future<void> reload() async {
     state = AsyncData(await _loadAndDrain());
   }
