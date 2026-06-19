@@ -45,11 +45,11 @@ class NotificationModel {
     this.contentId,
   });
 
-  NotificationModel copyWith({bool? read}) => NotificationModel(
+  NotificationModel copyWith({bool? read, int? receivedAt}) => NotificationModel(
         id: id,
         title: title,
         message: message,
-        receivedAt: receivedAt,
+        receivedAt: receivedAt ?? this.receivedAt,
         iconKey: iconKey,
         imageUrl: imageUrl,
         read: read ?? this.read,
@@ -97,7 +97,12 @@ class NotificationModel {
     final now = DateTime.now().millisecondsSinceEpoch;
     final id = (data['notification_id'] ?? '').trim();
     return NotificationModel(
-      id: id.isEmpty ? now.toString() : id,
+      // If the backend omits notification_id, derive a stable id from the
+      // notification content so that re-delivery (e.g. SDK pendingNotifications
+      // drain after a Flutter engine restart) maps to the same record and
+      // upsert stays idempotent. Avoids timestamp-based ids that differ on
+      // each call and would create visual duplicates in the list.
+      id: id.isEmpty ? contentFallbackId(push, data) : id,
       title: push.title ?? '',
       message: push.body ?? '',
       iconKey: data['icon'],
@@ -107,5 +112,27 @@ class NotificationModel {
       route: data['route'],
       contentId: data['content_id'],
     );
+  }
+
+  /// djb2 hash of notification content — stable across Dart process restarts
+  /// unlike String.hashCode, which uses a random seed.
+  ///
+  /// Public so the iOS NSE can replicate the same algorithm. The NSE stores raw
+  /// push data; when [notification_id] is absent from the backend, both sides
+  /// must derive the same fallback [id] to keep [NotificationsRepository.upsert]
+  /// idempotent across the foreground listener and the NSE queue drain.
+  static String contentFallbackId(
+      PushNotificationData push, Map<String, String> data) {
+    return _djb2Hex(
+      '${push.title ?? ''}|${push.body ?? ''}|${data['route'] ?? ''}|${data['content_id'] ?? ''}',
+    );
+  }
+
+  static String _djb2Hex(String raw) {
+    int h = 5381;
+    for (final c in raw.codeUnits) {
+      h = ((h << 5) + h + c) & 0xFFFFFFFF;
+    }
+    return 'auto_${h.toRadixString(16).padLeft(8, '0')}';
   }
 }

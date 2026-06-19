@@ -36,7 +36,11 @@ class NotificationService: AppAmbitNotificationService {
 
         let data = notification.data
         let notificationId = (data["notification_id"] as? String)
-            ?? String(Int(Date().timeIntervalSince1970 * 1000))
+            ?? Self.contentFallbackId(
+                title: content.title,
+                body: content.body ?? "",
+                route: data["route"] as? String,
+                contentId: data["content_id"] as? String)
 
         var record: [String: Any] = [
             "id": notificationId,
@@ -64,6 +68,27 @@ class NotificationService: AppAmbitNotificationService {
             serialized = Array(serialized.suffix(Self.maxItems))
         }
         defaults.set(serialized, forKey: Self.sharedPrefsItemsKey)
+    }
+
+    // MARK: - Fallback ID (mirrors Dart's _contentFallbackId / contentFallbackId)
+
+    /// djb2 hash of the notification content, producing the same `auto_xxxx`
+    /// string that [NotificationModel.contentFallbackId] returns on the Dart
+    /// side. Used when the backend omits `notification_id` so that the NSE
+    /// and the foreground listener derive identical IDs, keeping upserts
+    /// idempotent across both delivery paths.
+    private static func contentFallbackId(
+        title: String,
+        body: String,
+        route: String?,
+        contentId: String?
+    ) -> String {
+        let raw = "\(title)|\(body)|\(route ?? "")|\(contentId ?? "")"
+        var h = 5381
+        for c in raw.utf8 {
+            h = ((h << 5) &+ h &+ Int(c)) & 0xFFFFFFFF
+        }
+        return String(format: "auto_%08x", h)
     }
 }
 
