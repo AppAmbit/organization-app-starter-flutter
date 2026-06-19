@@ -8,28 +8,24 @@ import 'package:organization_app_starter/features/notifications/models/notificat
 import 'package:organization_app_starter/features/notifications/providers/notifications_providers.dart';
 import 'package:organization_app_starter/features/notifications/widgets/notification_tile.dart';
 
-class NotificationsScreen extends ConsumerStatefulWidget {
+class NotificationsScreen extends ConsumerWidget {
   const NotificationsScreen({super.key});
 
   @override
-  ConsumerState<NotificationsScreen> createState() =>
-      _NotificationsScreenState();
-}
-
-class _NotificationsScreenState
-    extends ConsumerState<NotificationsScreen> {
-  bool _settingsVisible = false;
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final topPadding = MediaQuery.of(context).padding.top;
     final asyncItems = ref.watch(notificationsProvider);
     final pushEnabled = ref.watch(pushEnabledProvider).value ?? true;
     final unreadCount = ref.watch(unreadCountProvider);
+    final settingsVisible = ref.watch(settingsVisibleProvider);
 
     return Stack(
       children: [
-        Container(
+        Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: AppLayout.contentMaxWidth),
+        child: Container(
           color: AppColors.background,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,8 +63,9 @@ class _NotificationsScreenState
                               ),
                             if (unreadCount > 0) const SizedBox(width: 16),
                             GestureDetector(
-                              onTap: () =>
-                                  setState(() => _settingsVisible = true),
+                              onTap: () => ref
+                                  .read(settingsVisibleProvider.notifier)
+                                  .show(),
                               child: const Icon(
                                 Icons.settings,
                                 size: 24,
@@ -125,14 +122,16 @@ class _NotificationsScreenState
             ],
           ),
         ),
+          ),
+        ),
 
         // Settings modal overlay
-        if (_settingsVisible) _SettingsModal(
+        if (settingsVisible) _SettingsModal(
           pushEnabled: pushEnabled,
           onToggle: (enabled) async {
             await ref.read(pushEnabledProvider.notifier).toggle(enabled);
           },
-          onClose: () => setState(() => _settingsVisible = false),
+          onClose: () => ref.read(settingsVisibleProvider.notifier).hide(),
         ),
       ],
     );
@@ -177,8 +176,10 @@ class _SettingsModal extends StatelessWidget {
         Center(
           child: GestureDetector(
             onTap: () {},
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 32),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 400),
+              child: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 24),
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(16),
@@ -253,6 +254,7 @@ class _SettingsModal extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
             ),
           ),
         ),

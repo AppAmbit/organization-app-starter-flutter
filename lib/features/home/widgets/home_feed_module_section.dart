@@ -90,6 +90,27 @@ class HomeFeedModuleSection extends StatelessWidget {
         }
 
         final double cardHeight = defaultCardWidth * 0.6;
+
+        // Center cards when all fit without scrolling (avoids empty trailing space on tablet)
+        final double totalLargeWidth = items.length * (defaultCardWidth + 16) + 40;
+        if (totalLargeWidth <= screenWidth) {
+          return SizedBox(
+            height: cardHeight + 20,
+            child: Center(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: items
+                    .map((item) => LargeCard(
+                          data: item,
+                          width: defaultCardWidth,
+                          onTap: () => NavigationService.openContentDetail(context, item),
+                        ))
+                    .toList(),
+              ),
+            ),
+          );
+        }
+
         return SizedBox(
           height: cardHeight + 20,
           child: ListView.builder(
@@ -119,6 +140,25 @@ class HomeFeedModuleSection extends StatelessWidget {
                 data: items.first,
                 margin: EdgeInsets.zero,
                 onTap: () => NavigationService.openContentDetail(context, items.first),
+              ),
+            ),
+          );
+        }
+
+        // Center cards when all fit without scrolling (avoids empty trailing space on tablet)
+        final double totalSmallWidth = items.length * (cardWidth + 16) + 40;
+        if (totalSmallWidth <= screenWidth) {
+          return SizedBox(
+            height: cardHeight,
+            child: Center(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: items
+                    .map((item) => SmallCard(
+                          data: item,
+                          onTap: () => NavigationService.openContentDetail(context, item),
+                        ))
+                    .toList(),
               ),
             ),
           );
@@ -154,11 +194,12 @@ class _FeaturedCarousel extends StatefulWidget {
 
 class _FeaturedCarouselState extends State<_FeaturedCarousel> {
   final PageController _controller = PageController();
-  int _currentPage = 0;
+  final ValueNotifier<int> _currentPage = ValueNotifier(0);
 
   @override
   void dispose() {
     _controller.dispose();
+    _currentPage.dispose();
     super.dispose();
   }
 
@@ -171,7 +212,7 @@ class _FeaturedCarouselState extends State<_FeaturedCarousel> {
           child: PageView.builder(
             controller: _controller,
             itemCount: widget.items.length,
-            onPageChanged: (index) => setState(() => _currentPage = index),
+            onPageChanged: (index) => _currentPage.value = index,
             itemBuilder: (context, index) => FeaturedCard(
               data: widget.items[index],
               onTap: widget.onTap != null
@@ -182,22 +223,27 @@ class _FeaturedCarouselState extends State<_FeaturedCarousel> {
         ),
         if (widget.items.length > 1) ...[
           const SizedBox(height: 8),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(widget.items.length, (index) {
-              return AnimatedContainer(
-                duration: const Duration(milliseconds: 200),
-                margin: const EdgeInsets.symmetric(horizontal: 4),
-                width: 6,
-                height: 6,
-                decoration: BoxDecoration(
-                  color: _currentPage == index
-                      ? AppColors.carouselDotActive
-                      : AppColors.carouselDotInactive,
-                  shape: BoxShape.circle,
-                ),
+          ListenableBuilder(
+            listenable: _currentPage,
+            builder: (context, _) {
+              return Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(widget.items.length, (index) {
+                  return AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    margin: const EdgeInsets.symmetric(horizontal: 4),
+                    width: 6,
+                    height: 6,
+                    decoration: BoxDecoration(
+                      color: _currentPage.value == index
+                          ? AppColors.carouselDotActive
+                          : AppColors.carouselDotInactive,
+                      shape: BoxShape.circle,
+                    ),
+                  );
+                }),
               );
-            }),
+            },
           ),
         ],
       ],

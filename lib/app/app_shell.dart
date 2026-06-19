@@ -10,6 +10,8 @@ import 'package:organization_app_starter/features/notifications/models/notificat
 import 'package:organization_app_starter/features/notifications/providers/notifications_providers.dart';
 import 'package:organization_app_starter/features/notifications/screens/notifications_screen.dart';
 import 'package:organization_app_starter/features/about/screens/about_screen.dart';
+import 'package:organization_app_starter/features/auth/screens/profile_screen.dart';
+import 'package:organization_app_starter/features/auth/providers/auth_providers.dart';
 import 'package:organization_app_starter/shared/services/analytics_service.dart';
 import 'package:organization_app_starter/shared/services/navigation_service.dart';
 import 'package:organization_app_starter/shared/widgets/snackbar_app_widget.dart';
@@ -39,7 +41,6 @@ class AppShell extends ConsumerStatefulWidget {
 class _AppShellState extends ConsumerState<AppShell>
     with WidgetsBindingObserver {
   static const int _notificationsTabIndex = 3;
-  int _selectedIndex = 0;
 
   static const _pages = <Widget>[
     HomeScreen(),
@@ -47,6 +48,7 @@ class _AppShellState extends ConsumerState<AppShell>
     Center(child: Text('Resources')),
     NotificationsScreen(),
     AboutScreen(),
+    ProfileScreen(),
   ];
 
   @override
@@ -98,6 +100,7 @@ class _AppShellState extends ConsumerState<AppShell>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
       ref.read(notificationsProvider.notifier).reload();
+      ref.read(authStateProvider.notifier).checkSessionOnResume();
     }
   }
 
@@ -119,8 +122,8 @@ class _AppShellState extends ConsumerState<AppShell>
           ),
         ),
       );
-    } else if (mounted) {
-      setState(() => _selectedIndex = _notificationsTabIndex);
+    } else {
+      ref.read(selectedTabIndexProvider.notifier).select(_notificationsTabIndex);
     }
   }
 
@@ -128,6 +131,7 @@ class _AppShellState extends ConsumerState<AppShell>
   Widget build(BuildContext context) {
     final isVisible = ref.watch(bottomBarVisibleProvider);
     final unreadCount = ref.watch(unreadCountProvider);
+    final selectedIndex = ref.watch(selectedTabIndexProvider);
     final mediaQuery = MediaQuery.of(context);
     final size = mediaQuery.size;
     final isTablet = size.shortestSide >= AppLayout.tabletBreakpoint;
@@ -150,7 +154,7 @@ class _AppShellState extends ConsumerState<AppShell>
             constraints: BoxConstraints(maxWidth: contentMaxWidth),
             child: Container(
               color: Theme.of(context).scaffoldBackgroundColor,
-              child: _pages[_selectedIndex],
+              child: _pages[selectedIndex],
             ),
           ),
         ),
@@ -166,10 +170,10 @@ class _AppShellState extends ConsumerState<AppShell>
             child: ConstrainedBox(
               constraints: BoxConstraints(maxWidth: contentMaxWidth),
               child: AnimatedBottomTabBar(
-                currentIndex: _selectedIndex,
+                currentIndex: selectedIndex,
                 unreadCount: unreadCount,
                 isTablet: isTablet,
-                onTap: (index) => setState(() => _selectedIndex = index),
+                onTap: (index) => ref.read(selectedTabIndexProvider.notifier).select(index),
               ),
             ),
           ),

@@ -78,3 +78,18 @@ class PushEnabledNotifier extends AsyncNotifier<bool> {
 
 final pushEnabledProvider =
     AsyncNotifierProvider<PushEnabledNotifier, bool>(PushEnabledNotifier.new);
+
+// ---------------------------------------------------------------------------
+// Settings modal visibility
+// ---------------------------------------------------------------------------
+
+class _SettingsVisibleNotifier extends Notifier<bool> {
+  @override
+  bool build() => false;
+  void show() => state = true;
+  void hide() => state = false;
+}
+
+final settingsVisibleProvider =
+    NotifierProvider<_SettingsVisibleNotifier, bool>(
+        _SettingsVisibleNotifier.new);
