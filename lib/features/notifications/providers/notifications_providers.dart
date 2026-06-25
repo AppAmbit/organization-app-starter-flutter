@@ -51,6 +51,14 @@ class NotificationsNotifier extends AsyncNotifier<List<NotificationModel>> {
     state = AsyncData(await _repo.markAllRead());
   }
 
+  Future<void> clearAll() async {
+    // Drain and discard the iOS NSE App Group queue so notifications written
+    // by the extension while the app was foregrounded don't reappear on resume.
+    await IosNotificationBridge.drainPending();
+    await _repo.clear();
+    state = const AsyncData([]);
+  }
+
   /// Re-reads persisted state and drains any pending NSE items. Call on resume.
   ///
   /// Background notifications are NOT delivered via

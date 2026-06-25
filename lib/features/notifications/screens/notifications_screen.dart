@@ -77,12 +77,31 @@ class NotificationsScreen extends ConsumerWidget {
                       ],
                     ),
                     const SizedBox(height: 4),
-                    const Text(
-                      'Stay updated with the latest activity',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: AppColors.textSecondary,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          'Stay updated with the latest activity',
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: AppColors.textSecondary,
+                          ),
+                        ),
+                        if (asyncItems.asData?.value.isNotEmpty ?? false)
+                          GestureDetector(
+                            onTap: () => ref
+                                .read(notificationsProvider.notifier)
+                                .clearAll(),
+                            child: const Text(
+                              'Clear All',
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.accent,
+                              ),
+                            ),
+                          ),
+                      ],
                     ),
                   ],
                 ),
