@@ -39,6 +39,8 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppConstants.appTitle,
       theme: AppTheme.light(textTheme),
+      darkTheme: AppTheme.dark(textTheme),
+      themeMode: ThemeMode.dark,
       home: const AppShell(),
     );
   }

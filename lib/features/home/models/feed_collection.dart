@@ -23,6 +23,9 @@ class FeedCollection {
   final String? badge;
   final String? contentId;
   final int displayOrder;
+  final int? autoScrollSeconds; // Featured carousel auto-advance interval (seconds)
+  final String? floatingImageUrl; // Single-card featured: logo floated above title
+  final String? overlayText;      // Single-card featured: transient overlay label
   final List<CollectionItem> collection;
 
   const FeedCollection({
@@ -37,6 +40,9 @@ class FeedCollection {
     this.badge,
     this.contentId,
     required this.displayOrder,
+    this.autoScrollSeconds,
+    this.floatingImageUrl,
+    this.overlayText,
     this.collection = const [],
   });
 
@@ -67,6 +73,9 @@ class FeedCollection {
       badge: map['badge'] as String?,
       contentId: cmsResolveContentId(map),
       displayOrder: (map['display_order'] as num?)?.toInt() ?? 0,
+      autoScrollSeconds: (map['auto_scroll_seconds'] as num?)?.toInt(),
+      floatingImageUrl: cmsResolveFloatingImageUrl(map),
+      overlayText: map['overlay_text'] as String?,
       collection: children,
     );
   }
@@ -87,6 +96,8 @@ class FeedCollection {
         image: image,
         badge: badge,
         contentId: contentId,
+        floatingImageUrl: floatingImageUrl,
+        overlayText: overlayText,
       ),
     ];
   }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:organization_app_starter/core/constants.dart';
 import 'package:organization_app_starter/core/styles/app_colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:organization_app_starter/features/home/providers/connectivity_provider.dart';
 import 'package:organization_app_starter/features/home/providers/home_feed_providers.dart';
 import 'package:organization_app_starter/features/home/widgets/home_feed_module_section.dart';
+import 'package:organization_app_starter/shared/widgets/oiwi_logo.dart';
 import 'package:organization_app_starter/app/app_providers.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -80,12 +80,18 @@ class HomeScreen extends ConsumerWidget {
             child: CustomScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
               slivers: [
-                const SliverAppBar(
+                SliverAppBar(
                   floating: true,
-                  title: Text(AppConstants.appTitle),
-                  backgroundColor: AppColors.white,
+                  title: const OiwiLogo(),
+                  backgroundColor: AppColors.surface,
                   elevation: 0,
-                  centerTitle: true,
+                  centerTitle: false,
+                  actions: [
+                    IconButton(
+                      icon: const Icon(Icons.cast, color: AppColors.textPrimary),
+                      onPressed: () {},
+                    ),
+                  ],
                 ),
                 SliverList(
                   delegate: SliverChildBuilderDelegate(

@@ -28,11 +28,11 @@ class LargeCard extends StatelessWidget {
         margin: margin ?? const EdgeInsets.only(right: 16),
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: AppColors.white,
+          borderRadius: BorderRadius.zero,
+          color: AppColors.surface,
           boxShadow: [
             BoxShadow(
-              color: AppColors.black.withValues(alpha: 0.05),
+              color: AppColors.white.withValues(alpha: 0.04),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -78,7 +78,9 @@ class LargeCard extends StatelessWidget {
                           vertical: 4,
                         ),
                         decoration: BoxDecoration(
-                          color: AppColors.white.withValues(alpha: 0.25),
+                          color: data.badge!.toUpperCase() == 'LIVE'
+                              ? AppColors.accentRed
+                              : AppColors.white.withValues(alpha: 0.25),
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: Text(

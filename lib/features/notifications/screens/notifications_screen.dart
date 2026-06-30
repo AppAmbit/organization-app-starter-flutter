@@ -180,7 +180,7 @@ class _SettingsModal extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 32),
               decoration: BoxDecoration(
-                color: AppColors.white,
+                color: AppColors.surface,
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Column(

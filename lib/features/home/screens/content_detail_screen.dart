@@ -20,7 +20,7 @@ class ContentDetailScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      backgroundColor: AppColors.white,
+      backgroundColor: AppColors.surface,
       body: CustomScrollView(
         slivers: [
           _buildSliverAppBar(context),
@@ -34,12 +34,12 @@ class ContentDetailScreen extends ConsumerWidget {
     return SliverAppBar(
       pinned: true,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      iconTheme: const IconThemeData(color: AppColors.black),
+      iconTheme: const IconThemeData(color: AppColors.textPrimary),
       title: item.title != null
           ? Text(
               item.title!,
               style: const TextStyle(
-                  color: AppColors.black,
+                  color: AppColors.textPrimary,
                   fontWeight: FontWeight.bold,
                   fontSize: 18),
             )

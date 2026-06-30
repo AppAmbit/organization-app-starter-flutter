@@ -15,6 +15,8 @@ class CollectionItem {
   final String? badge;
   final String? body;       // Optional HTML body content
   final String? contentId;
+  final String? floatingImageUrl; // Optional logo/image floated above the title (featured cards)
+  final String? overlayText;      // Optional transient overlay label shown over the image (featured cards)
 
   const CollectionItem({
     required this.id,
@@ -26,6 +28,8 @@ class CollectionItem {
     this.badge,
     this.body,
     this.contentId,
+    this.floatingImageUrl,
+    this.overlayText,
   });
 
   /// Parses a child item from the CMS JSON.
@@ -44,6 +48,8 @@ class CollectionItem {
       badge: map['badge'] as String?,
       body: map['body'] as String?,
       contentId: resolvedContentId,
+      floatingImageUrl: cmsResolveFloatingImageUrl(map),
+      overlayText: map['overlay_text'] as String?,
     );
   }
 

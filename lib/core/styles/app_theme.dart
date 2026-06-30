@@ -35,4 +35,51 @@ class AppTheme {
           unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w500, fontSize: 10),
         ),
       );
+
+  static ThemeData dark(TextTheme textTheme) => ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: AppColors.accent,
+          brightness: Brightness.dark,
+          surface: AppColors.surface,
+        ),
+        scaffoldBackgroundColor: AppColors.background,
+        textTheme: textTheme.apply(
+          bodyColor: AppColors.textPrimary,
+          displayColor: AppColors.textPrimary,
+        ),
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          elevation: 0,
+          backgroundColor: AppColors.surface,
+          titleTextStyle: textTheme.titleLarge?.copyWith(
+            fontWeight: FontWeight.bold,
+            color: AppColors.textPrimary,
+            letterSpacing: -0.5,
+          ),
+        ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: AppColors.surface,
+          selectedItemColor: AppColors.accent,
+          unselectedItemColor: AppColors.gray500,
+          type: BottomNavigationBarType.fixed,
+          elevation: 8,
+          selectedLabelStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 10),
+          unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w500, fontSize: 10),
+        ),
+        dividerColor: AppColors.gray300,
+        switchTheme: SwitchThemeData(
+          thumbColor: WidgetStateProperty.resolveWith(
+            (states) => states.contains(WidgetState.selected)
+                ? AppColors.accent
+                : AppColors.gray400,
+          ),
+          trackColor: WidgetStateProperty.resolveWith(
+            (states) => states.contains(WidgetState.selected)
+                ? AppColors.accent.withValues(alpha: 0.4)
+                : AppColors.gray300,
+          ),
+        ),
+      );
 }

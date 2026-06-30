@@ -2,13 +2,16 @@ class AppConstants {
   static const String cmsOrganizationSlug = 'organization_app_starter_new';
   static const String cmsHomeFeedCollection = 'feed_collection';
   static const String cmsHomeFeedItemCollection = 'feed_collection_item';
-  static const String appTitle = 'KavaUp';
+  static const String appTitle = 'ʻŌiwi TV';
 }
 
 class CmsContentType {
   static const String feedCarousel = 'feed_carousel';
   static const String contentDetails = 'content_details';
   static const String contentDetailItems = 'content_detail_items';
+  static const String categories = 'categories';
+  static const String shows = 'shows';
+  static const String liveChannels = 'live_channels';
 }
 
 class ContentBlockType {

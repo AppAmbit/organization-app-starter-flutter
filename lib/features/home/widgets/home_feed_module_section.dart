@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:organization_app_starter/core/constants.dart';
 import 'package:organization_app_starter/core/styles/app_colors.dart';
@@ -23,24 +25,28 @@ class HomeFeedModuleSection extends StatelessWidget {
     final items = section.items;
     if (items.isEmpty) return const SizedBox.shrink();
 
-    final showHeader = section.isCollection && section.title != null;
+    // Featured carousel (the first row) shows no title header — its cards carry
+    // their own overlay labels.
+    final showHeader = section.isCollection &&
+        section.title != null &&
+        section.cardType != CardType.featured;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if (showHeader)
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 32, 20, 16),
+            padding: const EdgeInsets.fromLTRB(20, 24, 20, 12),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   section.title!,
                   style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w800,
-                    color: AppColors.black,
-                    letterSpacing: -0.5,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.textPrimary,
+                    letterSpacing: -0.3,
                   ),
                 ),
                 if (section.subtitle != null) ...[
@@ -53,7 +59,6 @@ class HomeFeedModuleSection extends StatelessWidget {
               ],
             ),
           ),
-        const SizedBox(height: 10),
         _buildCarousel(context, items),
       ],
     );
@@ -66,6 +71,7 @@ class HomeFeedModuleSection extends StatelessWidget {
       case CardType.featured:
         return _FeaturedCarousel(
           items: items,
+          autoScrollSeconds: section.autoScrollSeconds,
           onTap: (item) => NavigationService.openContentDetail(context, item),
         );
       case CardType.large:
@@ -78,12 +84,16 @@ class HomeFeedModuleSection extends StatelessWidget {
           return SizedBox(
             height: cardHeight + 20,
             width: double.infinity,
-            child: Center(
-              child: LargeCard(
-                data: items.first,
-                width: singleWidth,
-                margin: EdgeInsets.zero,
-                onTap: () => NavigationService.openContentDetail(context, items.first),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: LargeCard(
+                  data: items.first,
+                  width: singleWidth,
+                  margin: EdgeInsets.zero,
+                  onTap: () => NavigationService.openContentDetail(context, items.first),
+                ),
               ),
             ),
           );
@@ -108,17 +118,21 @@ class HomeFeedModuleSection extends StatelessWidget {
       case CardType.small:
         final bool isTablet = screenWidth >= AppLayout.tabletBreakpoint;
         final double cardWidth = isTablet ? 220.0 : 160.0;
-        final double cardHeight = (cardWidth * 9 / 16) + 70;
+        final double cardHeight = (cardWidth * 9 / 16) + 84;
 
         if (items.length == 1) {
           return SizedBox(
             height: cardHeight,
             width: double.infinity,
-            child: Center(
-              child: SmallCard(
-                data: items.first,
-                margin: EdgeInsets.zero,
-                onTap: () => NavigationService.openContentDetail(context, items.first),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: SmallCard(
+                  data: items.first,
+                  margin: EdgeInsets.zero,
+                  onTap: () => NavigationService.openContentDetail(context, items.first),
+                ),
               ),
             ),
           );
@@ -144,9 +158,14 @@ class HomeFeedModuleSection extends StatelessWidget {
 
 class _FeaturedCarousel extends StatefulWidget {
   final List<CollectionItem> items;
+  final int? autoScrollSeconds;
   final void Function(CollectionItem item)? onTap;
 
-  const _FeaturedCarousel({required this.items, this.onTap});
+  const _FeaturedCarousel({
+    required this.items,
+    this.autoScrollSeconds,
+    this.onTap,
+  });
 
   @override
   State<_FeaturedCarousel> createState() => _FeaturedCarouselState();
@@ -155,19 +174,48 @@ class _FeaturedCarousel extends StatefulWidget {
 class _FeaturedCarouselState extends State<_FeaturedCarousel> {
   final PageController _controller = PageController();
   int _currentPage = 0;
+  Timer? _autoScrollTimer;
+
+  @override
+  void initState() {
+    super.initState();
+    _startAutoScroll();
+  }
+
+  void _startAutoScroll() {
+    _autoScrollTimer?.cancel();
+    // Only auto-advance when there is more than one slide.
+    if (widget.items.length <= 1) return;
+    final seconds = widget.autoScrollSeconds ?? 5;
+    if (seconds <= 0) return;
+    _autoScrollTimer = Timer.periodic(Duration(seconds: seconds), (_) {
+      if (!mounted || !_controller.hasClients) return;
+      final next = (_currentPage + 1) % widget.items.length;
+      _controller.animateToPage(
+        next,
+        duration: const Duration(milliseconds: 400),
+        curve: Curves.easeOutCubic,
+      );
+    });
+  }
 
   @override
   void dispose() {
+    _autoScrollTimer?.cancel();
     _controller.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final imageHeight = screenWidth * 10 / 16;
+    final totalHeight = imageHeight + 74;
+
     return Column(
       children: [
         SizedBox(
-          height: 450,
+          height: totalHeight,
           child: PageView.builder(
             controller: _controller,
             itemCount: widget.items.length,
@@ -181,23 +229,26 @@ class _FeaturedCarouselState extends State<_FeaturedCarousel> {
           ),
         ),
         if (widget.items.length > 1) ...[
-          const SizedBox(height: 8),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(widget.items.length, (index) {
-              return AnimatedContainer(
-                duration: const Duration(milliseconds: 200),
-                margin: const EdgeInsets.symmetric(horizontal: 4),
-                width: 6,
-                height: 6,
-                decoration: BoxDecoration(
-                  color: _currentPage == index
-                      ? AppColors.carouselDotActive
-                      : AppColors.carouselDotInactive,
-                  shape: BoxShape.circle,
-                ),
-              );
-            }),
+          const SizedBox(height: 6),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(widget.items.length, (index) {
+                return AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  margin: const EdgeInsets.symmetric(horizontal: 4),
+                  width: 7,
+                  height: 7,
+                  decoration: BoxDecoration(
+                    color: _currentPage == index
+                        ? AppColors.carouselDotActive
+                        : AppColors.carouselDotInactive,
+                    shape: BoxShape.circle,
+                  ),
+                );
+              }),
+            ),
           ),
         ],
       ],

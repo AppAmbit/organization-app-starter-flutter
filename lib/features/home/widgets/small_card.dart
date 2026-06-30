@@ -32,7 +32,7 @@ class SmallCard extends StatelessWidget {
             AspectRatio(
               aspectRatio: 16 / 9,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.zero,
                 child: CardImage(imageUrl: data.imageUrl, imagePath: data.image),
               ),
             ),

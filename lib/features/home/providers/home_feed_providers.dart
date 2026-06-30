@@ -23,8 +23,11 @@ final homeFeedSectionsProvider = FutureProvider<List<FeedCollection>>((
 
     debugPrint('[HomeFeed] Raw live sections fetched: ${sections.length}');
 
-    // Double sort guarantee
-    final sorted = sections.toList()
+    // Filter to only movie/series/channel content (lookup_key starts with 'movie_')
+    // and sort by display_order.
+    final sorted = sections
+        .where((s) => s.lookupKey.startsWith('movie_'))
+        .toList()
       ..sort((a, b) => a.displayOrder.compareTo(b.displayOrder));
 
     debugPrint('[HomeFeed] Sorted sections: ${sorted.length}');

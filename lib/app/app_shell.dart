@@ -5,11 +5,14 @@ import 'package:organization_app_starter/core/constants.dart';
 import 'package:organization_app_starter/core/styles/app_colors.dart';
 import 'package:organization_app_starter/features/home/models/collection_item.dart';
 import 'package:organization_app_starter/features/home/screens/home_screen.dart';
+import 'package:organization_app_starter/features/live_tv/screens/live_tv_screen.dart';
+import 'package:organization_app_starter/features/categories/screens/categories_screen.dart';
+import 'package:organization_app_starter/features/search/screens/search_screen.dart';
+import 'package:organization_app_starter/features/settings/screens/settings_screen.dart';
 import 'package:organization_app_starter/features/notifications/data/notifications_repository.dart';
 import 'package:organization_app_starter/features/notifications/models/notification_model.dart';
 import 'package:organization_app_starter/features/notifications/providers/notifications_providers.dart';
 import 'package:organization_app_starter/features/notifications/screens/notifications_screen.dart';
-import 'package:organization_app_starter/features/about/screens/about_screen.dart';
 import 'package:organization_app_starter/shared/services/analytics_service.dart';
 import 'package:organization_app_starter/shared/services/navigation_service.dart';
 import 'package:organization_app_starter/shared/widgets/snackbar_app_widget.dart';
@@ -38,15 +41,14 @@ class AppShell extends ConsumerStatefulWidget {
 
 class _AppShellState extends ConsumerState<AppShell>
     with WidgetsBindingObserver {
-  static const int _notificationsTabIndex = 3;
   int _selectedIndex = 0;
 
   static const _pages = <Widget>[
     HomeScreen(),
-    Center(child: Text('Categories')),
-    Center(child: Text('Resources')),
-    NotificationsScreen(),
-    AboutScreen(),
+    LiveTvScreen(),
+    CategoriesScreen(),
+    SearchScreen(),
+    SettingsScreen(),
   ];
 
   @override
@@ -120,7 +122,9 @@ class _AppShellState extends ConsumerState<AppShell>
         ),
       );
     } else if (mounted) {
-      setState(() => _selectedIndex = _notificationsTabIndex);
+      rootNavigatorKey.currentState?.push(
+        MaterialPageRoute(builder: (_) => const NotificationsScreen()),
+      );
     }
   }
 

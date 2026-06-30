@@ -214,7 +214,7 @@ class _ActionRow extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 1),
       child: Material(
-        color: AppColors.white,
+        color: AppColors.surface,
         child: InkWell(
           onTap: onTap,
           child: Container(

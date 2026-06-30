@@ -16,7 +16,7 @@ class NotificationTile extends StatelessWidget {
       behavior: HitTestBehavior.opaque,
       child: Container(
         decoration: const BoxDecoration(
-          color: AppColors.white,
+          color: AppColors.surface,
           border: Border(
             bottom: BorderSide(color: AppColors.notificationBorder, width: 1),
           ),

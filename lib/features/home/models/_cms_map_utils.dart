@@ -63,6 +63,12 @@ String? cmsResolveImageUrl(Map<String, dynamic> map) {
   return _extractImageUrl(map['image']);
 }
 
+// Optional floating image (logo/badge floated above the title on featured cards).
+String? cmsResolveFloatingImageUrl(Map<String, dynamic> map) {
+  return _extractImageUrl(map['floating_image_url']) ??
+      _extractImageUrl(map['floating_image']);
+}
+
 bool cmsParseBool(dynamic value) {
   if (value is bool) return value;
   if (value is num) return value != 0;
