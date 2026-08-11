@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "appambit": {
+      "type": "http",
+      "url": "https://appambit.com/mcp/appambit",
+      "headers": {
+        "Authorization": "Bearer YOUR_APPAMBIT_PERSONAL_ACCESS_TOKEN"
+      }
+    }
+  }
+}

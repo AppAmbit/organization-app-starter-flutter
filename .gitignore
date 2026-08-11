@@ -56,6 +56,7 @@ lib/generated_plugin_registrant.dart
 **/android/key.properties
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
+google-services.json
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
@@ -99,3 +100,7 @@ lib/generated_plugin_registrant.dart
 .claude
 .idea/libraries
 .idea
+
+# AppAmbit MCP server config — personal access token, do not commit
+.mcp.json
+!.mcp.json.example

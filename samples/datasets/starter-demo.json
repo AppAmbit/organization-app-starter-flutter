@@ -1,0 +1,764 @@
+{
+    "content_types": [
+        {
+            "display_name": "Carousel items",
+            "entries": [
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Run More Productive Meetings",
+                        "subtitle": "Save time and improve decisions.",
+                        "lookup_key": "prod_item_1",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Mental Clarity",
+                        "subtitle": "Reduce stress and sharpen focus.",
+                        "lookup_key": "prod_item_2",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "High Productivity System",
+                        "subtitle": "Build elite routines for focus, time management, goal execution, remote work efficiency, and daily momentum with practical step-by-step strategies.",
+                        "lookup_key": "prod_item_3",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "High Productivity System",
+                                "content": [
+                                    "019ff297-d79c-75f3-b57c-87b0ff25c4b8",
+                                    "019ff297-d79c-75f3-b57c-87b177c4b8d8"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Cybersecurity Basics for Everyone",
+                        "subtitle": "Protect your accounts, devices, and personal information with simple security habits anyone can apply.",
+                        "lookup_key": "tech_item_1",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Best Cloud Storage Strategies",
+                        "subtitle": "Organize files, sync devices, and keep important data backed up with modern cloud solutions.",
+                        "lookup_key": "tech_item_2",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Smart Home Starter Guide",
+                        "subtitle": "Learn how connected lights, speakers, cameras, and automation can simplify daily living.",
+                        "lookup_key": "tech_item_3",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "How to Build an Emergency Fund",
+                        "subtitle": "Create financial security by saving for unexpected expenses and life events step by step.",
+                        "lookup_key": "finance_item_1",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Improve Your Credit Score",
+                        "subtitle": "Understand the factors that affect credit and practical ways to raise your score responsibly.",
+                        "lookup_key": "finance_item_2",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Retirement Planning Made Simple",
+                        "subtitle": "Plan ahead with consistent saving, compound growth, and realistic future goals.",
+                        "lookup_key": "finance_item_3",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "RECIPE",
+                        "image": null,
+                        "title": "Authentic Italian Pasta",
+                        "subtitle": "Learn the secret to authentic Italian pasta from scratch.",
+                        "lookup_key": "recipe_pasta",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Mastering the Grill",
+                        "subtitle": "Temperature control and marinades for the perfect cut.",
+                        "lookup_key": "recipe_grill",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "VEGAN",
+                        "image": null,
+                        "title": "Plant-Based Desserts",
+                        "subtitle": "Delicious, guilt-free desserts without dairy or eggs.",
+                        "lookup_key": "recipe_vegan_dessert",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "BASICS",
+                        "image": null,
+                        "title": "Portrait Lighting Fundamentals",
+                        "subtitle": "Understand softboxes, reflectors, and the golden ratio.",
+                        "lookup_key": "photo_lighting",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "GEAR",
+                        "image": null,
+                        "title": "Choosing Your First Lens",
+                        "subtitle": "Prime vs Zoom: Which one is right for your style?",
+                        "lookup_key": "photo_gear",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": null,
+                        "subtitle": null,
+                        "lookup_key": "photo_tips",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "How to Pack a Suitcase Like a Pro",
+                                "content": [
+                                    "019ff297-d79c-75f3-b57c-87b29224ab5c",
+                                    "019ff297-d79c-75f3-b57c-87b30a163518",
+                                    "019ff297-d79c-75f3-b57c-87b4b2a6930f",
+                                    "019ff297-d79c-75f3-b57c-87b51d2b9f4d"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Minimalist Living Rooms",
+                        "subtitle": "How to create a clean, clutter-free environment.",
+                        "lookup_key": "design_minimalism",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "NATURE",
+                        "image": null,
+                        "title": "Indoor Plants Guide",
+                        "subtitle": "The best low-maintenance plants for your apartment.",
+                        "lookup_key": "design_plants",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "DOGS",
+                        "image": null,
+                        "title": "Puppy Obedience 101",
+                        "subtitle": "Basic commands every dog should learn in their first months.",
+                        "lookup_key": "pets_dogs",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "CATS",
+                        "image": null,
+                        "title": "Feline Nutrition",
+                        "subtitle": "Understanding what your cat really needs in their diet.",
+                        "lookup_key": "pets_cats",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        },
+        {
+            "display_name": "Feed Carousel",
+            "entries": [
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Productivity",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "Run More Productive Meetings",
+                                    "subtitle": "Save time and improve decisions.",
+                                    "lookup_key": "prod_item_1",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "Mental Clarity",
+                                    "subtitle": "Reduce stress and sharpen focus.",
+                                    "lookup_key": "prod_item_2",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "High Productivity System",
+                                    "subtitle": "Build elite routines for focus, time management, goal execution, remote work efficiency, and daily momentum with practical step-by-step strategies.",
+                                    "lookup_key": "prod_item_3",
+                                    "content_detail": "019ff297-d79c-75f3-b57c-87b6253f732d"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Get more done every day",
+                        "card_type": "featured",
+                        "lookup_key": "productivity_section",
+                        "display_order": 1,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Technology",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "Cybersecurity Basics for Everyone",
+                                    "subtitle": "Protect your accounts, devices, and personal information with simple security habits anyone can apply.",
+                                    "lookup_key": "tech_item_1",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "Best Cloud Storage Strategies",
+                                    "subtitle": "Organize files, sync devices, and keep important data backed up with modern cloud solutions.",
+                                    "lookup_key": "tech_item_2",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "Smart Home Starter Guide",
+                                    "subtitle": "Learn how connected lights, speakers, cameras, and automation can simplify daily living.",
+                                    "lookup_key": "tech_item_3",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Discover practical tools that improve writing, planning, coding, and productivity in everyday tasks.",
+                        "card_type": "small",
+                        "lookup_key": "technology_section",
+                        "display_order": 2,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Finance",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "How to Build an Emergency Fund",
+                                    "subtitle": "Create financial security by saving for unexpected expenses and life events step by step.",
+                                    "lookup_key": "finance_item_1",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "Improve Your Credit Score",
+                                    "subtitle": "Understand the factors that affect credit and practical ways to raise your score responsibly.",
+                                    "lookup_key": "finance_item_2",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "Retirement Planning Made Simple",
+                                    "subtitle": "Plan ahead with consistent saving, compound growth, and realistic future goals.",
+                                    "lookup_key": "finance_item_3",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Learn how investing works, understand risk, and start building long-term wealth with confidence.",
+                        "card_type": "small",
+                        "lookup_key": "finance_section",
+                        "display_order": 3,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": null,
+                        "content": "019ff297-d79c-75f3-b57c-87b7d562707f",
+                        "carousel": [],
+                        "subtitle": null,
+                        "card_type": "large",
+                        "lookup_key": "travel_large_card",
+                        "display_order": 4,
+                        "is_collection": false
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "LIFESTYLE",
+                        "image": null,
+                        "title": "Culinary Arts",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "RECIPE",
+                                    "image": null,
+                                    "title": "Authentic Italian Pasta",
+                                    "subtitle": "Learn the secret to authentic Italian pasta from scratch.",
+                                    "lookup_key": "recipe_pasta",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "Mastering the Grill",
+                                    "subtitle": "Temperature control and marinades for the perfect cut.",
+                                    "lookup_key": "recipe_grill",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "VEGAN",
+                                    "image": null,
+                                    "title": "Plant-Based Desserts",
+                                    "subtitle": "Delicious, guilt-free desserts without dairy or eggs.",
+                                    "lookup_key": "recipe_vegan_dessert",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Master the kitchen with these essential techniques.",
+                        "card_type": "small",
+                        "lookup_key": "culinary_arts_section",
+                        "display_order": 5,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Photography Mastery",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "BASICS",
+                                    "image": null,
+                                    "title": "Portrait Lighting Fundamentals",
+                                    "subtitle": "Understand softboxes, reflectors, and the golden ratio.",
+                                    "lookup_key": "photo_lighting",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "GEAR",
+                                    "image": null,
+                                    "title": "Choosing Your First Lens",
+                                    "subtitle": "Prime vs Zoom: Which one is right for your style?",
+                                    "lookup_key": "photo_gear",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": null,
+                                    "subtitle": null,
+                                    "lookup_key": "photo_tips",
+                                    "content_detail": "019ff297-d79c-75f3-b57c-87b7d562707f"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Capture the world through your lens like a pro.",
+                        "card_type": "large",
+                        "lookup_key": "photography_mastery_section",
+                        "display_order": 6,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "MUSIC",
+                        "image": null,
+                        "title": "Home Studio Setup",
+                        "content": "019ff297-d79c-75f3-b57c-87b7d562707f",
+                        "carousel": [],
+                        "subtitle": "Start producing your own tracks without breaking the bank.",
+                        "card_type": "large",
+                        "lookup_key": "music_production_banner",
+                        "display_order": 7,
+                        "is_collection": false
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Interior Design",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": null,
+                                    "image": null,
+                                    "title": "Minimalist Living Rooms",
+                                    "subtitle": "How to create a clean, clutter-free environment.",
+                                    "lookup_key": "design_minimalism",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "NATURE",
+                                    "image": null,
+                                    "title": "Indoor Plants Guide",
+                                    "subtitle": "The best low-maintenance plants for your apartment.",
+                                    "lookup_key": "design_plants",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Transform your living space with minimal effort.",
+                        "card_type": "small",
+                        "lookup_key": "interior_design_section",
+                        "display_order": 8,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Pet Care & Training",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "DOGS",
+                                    "image": null,
+                                    "title": "Puppy Obedience 101",
+                                    "subtitle": "Basic commands every dog should learn in their first months.",
+                                    "lookup_key": "pets_dogs",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "CATS",
+                                    "image": null,
+                                    "title": "Feline Nutrition",
+                                    "subtitle": "Understanding what your cat really needs in their diet.",
+                                    "lookup_key": "pets_cats",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Everything you need to keep your furry friends happy.",
+                        "card_type": "small",
+                        "lookup_key": "pet_care_section",
+                        "display_order": 9,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        },
+        {
+            "display_name": "Content Detail Items",
+            "entries": [
+                {
+                    "data": {
+                        "text": "<h2>Build a High Productivity System That Actually Works</h2><h3>Create a Clear Daily Plan</h3><p>Productivity begins with clarity. Start each day by identifying your top priorities and writing down the most important tasks you need to complete. Focus on a short list instead of trying to do everything at once.</p><h3>Use Time Blocking</h3><p>Assign specific blocks of time for deep work, meetings, emails, breaks, and planning. Scheduling your day in advance reduces distractions and helps you stay consistent.</p><h3>Eliminate Unnecessary Distractions</h3><p>Turn off non-essential notifications, keep your workspace clean, and create an environment that supports concentration.</p><h3>Work in Focus Sessions</h3><p>Use focused work intervals such as 25, 45, or 60 minutes followed by short breaks. This keeps energy levels stable throughout the day.</p><h3>Track Tasks in One Trusted System</h3><p>Keep all tasks, ideas, deadlines, and reminders in one place. A reliable system prevents mental overload.</p><h3>Review Progress Weekly</h3><p>Take time each week to review completed tasks, unfinished priorities, and upcoming goals.</p><h3>Protect Your Energy</h3><p>Sleep well, exercise regularly, eat balanced meals, and schedule recovery time. High productivity is also about managing energy.</p><p>The best productivity system is simple, repeatable, and built around your real life.</p>",
+                        "type": "text",
+                        "lookup_key": "productivity_system_fullcontent"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p></p>",
+                        "type": "video",
+                        "button_url": null,
+                        "lookup_key": "productivity_system_video",
+                        "button_text": null,
+                        "banner_image": null,
+                        "banner_video": "https://archive.org/download/productivity-series-files-and-folders-macmost-2575/2575ProductivityFiles.mp4",
+                        "button_color": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<h2>How to Pack a Suitcase Like a Pro</h2>",
+                        "type": "text",
+                        "lookup_key": "travel_packing_lg_title"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<h3>Start With a Packing List</h3><p>Before placing anything in your suitcase, make a list of essentials such as clothing, toiletries, chargers, travel documents, and medications.</p><h3>Choose the Right Clothes</h3><p>Pack versatile clothing that can be mixed and matched. Choose neutral colors and lightweight fabrics that are easy to layer.</p><h3>Roll Instead of Fold</h3><p>Rolling clothes instead of folding them can save space and reduce wrinkles.</p><h3>Use Packing Cubes</h3><p>Packing cubes help organize your suitcase by category and make unpacking faster.</p><h3>Place Heavy Items at the Bottom</h3><p>Shoes and heavier objects should sit near the wheels to help balance the bag.</p><h3>Keep Essentials in Your Carry-On</h3><p>Always carry valuables, travel documents, medications, and one extra outfit in your carry-on in case checked luggage is delayed.</p><p>With smart packing habits, every trip becomes easier, lighter, and more enjoyable.</p>",
+                        "type": "text",
+                        "lookup_key": "travel_packing_lg_body"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p></p>",
+                        "type": "image",
+                        "button_url": null,
+                        "lookup_key": "travel_packing_lg_image",
+                        "button_text": null,
+                        "banner_image": null,
+                        "banner_video": null,
+                        "button_color": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": "https://appambit.com",
+                        "lookup_key": "travel_packing_lg_button",
+                        "button_text": "VISIT OUR SITE!",
+                        "button_color": "#00A84D"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        },
+        {
+            "display_name": "Content Details",
+            "entries": [
+                {
+                    "data": {
+                        "title": "High Productivity System",
+                        "content": [
+                            "019ff297-d79c-75f3-b57c-87b0ff25c4b8",
+                            "019ff297-d79c-75f3-b57c-87b177c4b8d8"
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "How to Pack a Suitcase Like a Pro",
+                        "content": [
+                            "019ff297-d79c-75f3-b57c-87b29224ab5c",
+                            "019ff297-d79c-75f3-b57c-87b30a163518",
+                            "019ff297-d79c-75f3-b57c-87b4b2a6930f",
+                            "019ff297-d79c-75f3-b57c-87b51d2b9f4d"
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        }
+    ]
+}
