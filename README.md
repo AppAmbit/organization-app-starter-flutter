@@ -28,14 +28,19 @@
 
 **The app has no hardcoded screens.** Every card, section and article page comes from the CMS.
 
-- One codebase runs as a blog, a cinema billboard, a nonprofit app or a training app.
+- One codebase can runs as a
+  - Blog
+  - Cinema billboard
+  - Nonprofit app
+  - Training app.
+  - Starter app.
 - Changing content needs no rebuild and no developer.
 - Five ready-made content sets are in [`samples/`](samples/) — import one and the app fills up.
 
 <table>
   <tr>
-    <td width="50%"><img alt="Home feed" src="samples/screenshots/movies/feed%20-%203.png"></td>
-    <td width="50%"><img alt="Detail screen" src="samples/screenshots/movies/feed%20-%202.png"></td>
+    <td width="50%"><img alt="Home feed" src="samples/screenshots/fitness/feed%20-%201.png"></td>
+    <td width="50%"><img alt="Detail screen" src="samples/screenshots/fitness/feed%20-%203.png"></td>
   </tr>
   <tr>
     <td align="center"><em>Home feed — hero carousel + genre rows</em></td>
@@ -86,8 +91,8 @@ flutter pub get
 3. Paste your keys:
 
    ```
-   APPAMBIT_APPKEY_IOS=<your ios app key>
-   APPAMBIT_APPKEY_ANDROID=<your android app key>
+   APPAMBIT_APPKEY_IOS=<your-ios-app-key>
+   APPAMBIT_APPKEY_ANDROID=<your-android-app-key>
    ```
 
 The keys are loaded by [`AppConfig.load()`](lib/core/config/app_config.dart) before
@@ -114,7 +119,30 @@ Two ways to load it:
 > **Images are left empty on purpose.** Each dataset tells you the exact ratio and size every card
 > slot wants — see [samples/README.md → Images](samples/README.md#images).
 
-### 4. Run
+### 4. Create the auth table
+
+This starter ships without a login step, so you can skip this for now. If you add login and register
+on top of AppAmbit's managed database, run this once in the database linked to your app:
+
+```sql
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  password_hash TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  token TEXT,
+  expires_at TEXT
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users (email);
+```
+
+There is no separate sessions table — the hashed session token and its expiry live on the user row,
+30 days by default. See the
+[React Native starter](../organization-app-starter-react-native/README.md) for a working
+implementation of this schema.
+
+### 5. Run
 
 ```sh
 flutter run
