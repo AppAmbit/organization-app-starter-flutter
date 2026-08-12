@@ -39,11 +39,11 @@
 
 <table>
   <tr>
-    <td width="50%"><img alt="Home feed" src="samples/screenshots/fitness/feed%20-%201.png"></td>
-    <td width="50%"><img alt="Detail screen" src="samples/screenshots/fitness/feed%20-%203.png"></td>
+    <td width="50%"><img alt="Home feed" src="samples/screenshots/fitness/feed%20-%203.png"></td>
+    <td width="50%"><img alt="Detail screen" src="samples/screenshots/fitness/feed%20-%201.png"></td>
   </tr>
   <tr>
-    <td align="center"><em>Home feed — hero carousel + genre rows</em></td>
+    <td align="center"><em>Home feed — hero carousel</em></td>
     <td align="center"><em>Detail screen — image, rich text, CTA button</em></td>
   </tr>
 </table>
