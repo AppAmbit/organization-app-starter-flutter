@@ -31,6 +31,4 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/
-    - movies_example/
     - .env

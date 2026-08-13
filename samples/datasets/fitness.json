@@ -1,0 +1,985 @@
+{
+    "content_types": [
+        {
+            "display_name": "Carousel items",
+            "entries": [
+                {
+                    "data": {
+                        "badge": "NUTRITION",
+                        "image": "68ebf149-ed0b-4312-a4aa-a7d9853b7596.webp",
+                        "title": "Meal Prep 101",
+                        "subtitle": "Spend 2 hours on Sunday, eat healthy all week.",
+                        "lookup_key": "fitness_meal_prep",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "MOBILITY",
+                        "image": "7d3b98f9-dc58-4891-bc04-8b6627dd41f2.webp",
+                        "title": "Morning Mobility Routine",
+                        "subtitle": "Start your day with 10 minutes of movement.",
+                        "lookup_key": "fitness_morning_mobility",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "FUELING",
+                        "image": "450ba646-a89e-4bdd-96ad-1fc74e23d763.webp",
+                        "title": "Pre & Post-Workout Nutrition",
+                        "subtitle": "What to eat before and after your training sessions.",
+                        "lookup_key": "fitness_preworkout_nutrition",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "CARDIO",
+                        "image": "3b1eb8df-92b2-47ce-aaa0-a1b62e0fa2f2.webp",
+                        "title": "Jump Rope Cardio",
+                        "subtitle": "Low-cost, high-intensity cardio you can do anywhere.",
+                        "lookup_key": "fitness_jump_rope",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "CARDIO",
+                        "image": "69da4d2e-667e-40c4-b1ce-a28d80b6de50.webp",
+                        "title": "Running for Beginners",
+                        "subtitle": "Go from couch to 5K with this progressive plan.",
+                        "lookup_key": "fitness_running_beginners",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "YOGA",
+                        "image": "197c0b26-6205-4fbe-9529-7d22c7e74746.jpg",
+                        "title": "Yoga for Athletes",
+                        "subtitle": "Reduce injury risk and improve performance with yoga.",
+                        "lookup_key": "fitness_yoga_athletes",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "LEGS",
+                        "image": "a37a61a2-dc8c-4e28-a382-f392df90a92f.jpg",
+                        "title": "Back Squat Technique",
+                        "subtitle": "Develop lower body power and stability.",
+                        "lookup_key": "fitness_squat",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "PROTEIN",
+                        "image": "e67ff100-c6bf-439f-a7f2-7bf649a41060.jpg",
+                        "title": "High-Protein Recipes",
+                        "subtitle": "Fuel your gains with these 5 quick muscle-building meals.",
+                        "lookup_key": "fitness_protein_recipes",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "HIIT",
+                        "image": "edf92a95-d23d-4180-9710-ddfe303af2e6.webp",
+                        "title": "30-Min HIIT Blast",
+                        "subtitle": "Burn fat and boost metabolism with high-intensity intervals.",
+                        "lookup_key": "fitness_hiit_30min",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "POWER",
+                        "image": "deea0f3d-86b4-41a0-9604-d28ae420015b.png",
+                        "title": "Deadlift Mastery",
+                        "subtitle": "Build total-body strength with this foundational lift.",
+                        "lookup_key": "fitness_deadlift",
+                        "content_detail": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "STRENGTH",
+                        "image": "8df8753c-b9ad-4056-b39c-176bb6855daf.jpeg",
+                        "title": "Bench Press Fundamentals",
+                        "subtitle": "Master chest and tricep strength with proper form.",
+                        "lookup_key": "fitness_bench_press",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "Bench Press Fundamentals",
+                                "content": [
+                                    "019fece6-a607-700c-a3a3-f6e3f9a87028",
+                                    "019fecb6-f358-7119-b0aa-8f8ddbc84e11",
+                                    "019fecb6-f3bf-739d-b6ba-9b22e39022ca"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        },
+        {
+            "display_name": "Feed Carousel",
+            "entries": [
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Cardio & HIIT",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "HIIT",
+                                    "image": "edf92a95-d23d-4180-9710-ddfe303af2e6.webp",
+                                    "title": "30-Min HIIT Blast",
+                                    "subtitle": "Burn fat and boost metabolism with high-intensity intervals.",
+                                    "lookup_key": "fitness_hiit_30min",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "CARDIO",
+                                    "image": "69da4d2e-667e-40c4-b1ce-a28d80b6de50.webp",
+                                    "title": "Running for Beginners",
+                                    "subtitle": "Go from couch to 5K with this progressive plan.",
+                                    "lookup_key": "fitness_running_beginners",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "CARDIO",
+                                    "image": "3b1eb8df-92b2-47ce-aaa0-a1b62e0fa2f2.webp",
+                                    "title": "Jump Rope Cardio",
+                                    "subtitle": "Low-cost, high-intensity cardio you can do anywhere.",
+                                    "lookup_key": "fitness_jump_rope",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Burn fat and push your cardiovascular limits.",
+                        "card_type": "small",
+                        "lookup_key": "cardio_hiit_section",
+                        "display_order": 3,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Flexibility & Recovery",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "MOBILITY",
+                                    "image": "7d3b98f9-dc58-4891-bc04-8b6627dd41f2.webp",
+                                    "title": "Morning Mobility Routine",
+                                    "subtitle": "Start your day with 10 minutes of movement.",
+                                    "lookup_key": "fitness_morning_mobility",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "YOGA",
+                                    "image": "197c0b26-6205-4fbe-9529-7d22c7e74746.jpg",
+                                    "title": "Yoga for Athletes",
+                                    "subtitle": "Reduce injury risk and improve performance with yoga.",
+                                    "lookup_key": "fitness_yoga_athletes",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Move better, recover faster, and prevent injuries.",
+                        "card_type": "small",
+                        "lookup_key": "flexibility_recovery_section",
+                        "display_order": 14,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Strength Training",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "STRENGTH",
+                                    "image": "8df8753c-b9ad-4056-b39c-176bb6855daf.jpeg",
+                                    "title": "Bench Press Fundamentals",
+                                    "subtitle": "Master chest and tricep strength with proper form.",
+                                    "lookup_key": "fitness_bench_press",
+                                    "content_detail": "019fecb7-acd5-73e1-a1ef-6918182b6a47"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "POWER",
+                                    "image": "deea0f3d-86b4-41a0-9604-d28ae420015b.png",
+                                    "title": "Deadlift Mastery",
+                                    "subtitle": "Build total-body strength with this foundational lift.",
+                                    "lookup_key": "fitness_deadlift",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "LEGS",
+                                    "image": "a37a61a2-dc8c-4e28-a382-f392df90a92f.jpg",
+                                    "title": "Back Squat Technique",
+                                    "subtitle": "Develop lower body power and stability.",
+                                    "lookup_key": "fitness_squat",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Build muscle and increase your total-body strength.",
+                        "card_type": "small",
+                        "lookup_key": "strength_training_section",
+                        "display_order": 2,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "FITNESS",
+                        "image": "77337c0b-6740-45c8-b053-3cd5dd7b1b25.jpeg",
+                        "title": "Your Fitness Journey Starts Here",
+                        "content": null,
+                        "carousel": [],
+                        "subtitle": "Workouts, nutrition, and recovery — all in one place.",
+                        "card_type": "featured",
+                        "lookup_key": "fitness_featured_banner",
+                        "display_order": 1,
+                        "is_collection": false
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Nutrition & Diet",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "NUTRITION",
+                                    "image": "68ebf149-ed0b-4312-a4aa-a7d9853b7596.webp",
+                                    "title": "Meal Prep 101",
+                                    "subtitle": "Spend 2 hours on Sunday, eat healthy all week.",
+                                    "lookup_key": "fitness_meal_prep",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "PROTEIN",
+                                    "image": "e67ff100-c6bf-439f-a7f2-7bf649a41060.jpg",
+                                    "title": "High-Protein Recipes",
+                                    "subtitle": "Fuel your gains with these 5 quick muscle-building meals.",
+                                    "lookup_key": "fitness_protein_recipes",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "FUELING",
+                                    "image": "450ba646-a89e-4bdd-96ad-1fc74e23d763.webp",
+                                    "title": "Pre & Post-Workout Nutrition",
+                                    "subtitle": "What to eat before and after your training sessions.",
+                                    "lookup_key": "fitness_preworkout_nutrition",
+                                    "content_detail": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Fuel your body the right way, every day.",
+                        "card_type": "small",
+                        "lookup_key": "nutrition_section",
+                        "display_order": 13,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        },
+        {
+            "display_name": "Content Detail Items",
+            "entries": [
+                {
+                    "data": {
+                        "text": "<p></p>",
+                        "type": "image",
+                        "button_url": null,
+                        "lookup_key": "fitness_bench_press_image",
+                        "button_text": null,
+                        "banner_image": "bc517b79-1584-4b61-a003-9e39340cb31d.jpeg",
+                        "banner_video": null,
+                        "button_color": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_squat_button",
+                        "button_text": "View Full Routine",
+                        "button_color": "#E53E3E"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>Key poses for athletic performance (hold 30–60 sec each):</p><ul><li><strong>Downward Dog</strong> — stretches hamstrings and calves</li><li><strong>Pigeon Pose</strong> — releases hip flexors</li><li><strong>Warrior II</strong> — builds hip strength and balance</li><li><strong>Bridge Pose</strong> — activates glutes and spine</li><li><strong>Seated Forward Fold</strong> — deep hamstring release</li></ul><p>Practice 3–4x per week to reduce injury risk and accelerate recovery.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_yoga_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>10-minute morning sequence:</p><ol><li>Cat-Cow — 1 min</li><li>Hip circles — 1 min each side</li><li>World's Greatest Stretch — 2 min each side</li><li>Thoracic rotation — 1 min each side</li><li>Standing hamstring reach — 2 min</li></ol><p><strong>Key tip:</strong> Move slowly and with intention. Daily practice improves posture, reduces pain, and boosts energy.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_mobility_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Pre-workout (1–2 hrs before):</strong> Eat complex carbs + moderate protein. Try oats with banana or rice with chicken.</p><p><strong>Post-workout (within 30–60 min):</strong> Prioritize protein for muscle repair and fast carbs to replenish glycogen. Ideal: protein shake + fruit.</p><p><strong>Hydration:</strong> Drink 500ml of water before training and sip throughout your session.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_preworkout_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_preworkout_button",
+                        "button_text": "Build Meal Plan",
+                        "button_color": "#2F855A"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>5 quick muscle-building meals under 15 minutes:</p><ol><li>Greek yogurt parfait — 30g protein</li><li>Chicken & rice bowl with veggies — 45g protein</li><li>Tuna avocado wrap — 35g protein</li><li>Egg white omelette with cottage cheese — 28g protein</li><li>Protein shake with oats and banana — 40g protein</li></ol>",
+                        "type": "text",
+                        "lookup_key": "fitness_protein_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_meal_prep_button",
+                        "button_text": "Get Recipes",
+                        "button_color": "#2F855A"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>Dedicate 2 hours every Sunday to transform your week:</p><ol><li>Cook a large batch of protein (chicken, eggs, or tofu)</li><li>Prepare 2–3 complex carbs (rice, sweet potato, quinoa)</li><li>Roast a variety of vegetables</li><li>Portion into containers for 5 days</li></ol><p><strong>Key tip:</strong> Store proteins and carbs separately to maintain freshness and flexibility when building meals.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_meal_prep_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>Jump rope burns up to 15 calories per minute. Start with the basic two-foot bounce: 30 seconds on, 30 seconds rest for 10 rounds.</p><p><strong>Progression:</strong> Alternate feet for coordination, then advance to double-unders (rope passes twice per jump).</p><p><strong>Key tip:</strong> Always land softly on the balls of your feet to protect your joints.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_jump_rope_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>Position the bar across your upper traps. Stand feet shoulder-width, toes slightly out. Break at the hips and knees simultaneously, sit back and down until thighs are parallel to the floor.</p><p><strong>Sets & Reps:</strong> 4 sets of 6–8 reps.</p><p><strong>Key tip:</strong> Prioritize depth over load — proper squat depth recruits glutes, quads, and hamstrings fully.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_squat_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_jump_rope_button",
+                        "button_text": "Start Jumping",
+                        "button_color": "#DD6B20"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_deadlift_button",
+                        "button_text": "Watch Form Guide",
+                        "button_color": "#E53E3E"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_bench_press_button",
+                        "button_text": "Start Training",
+                        "button_color": "#E53E3E"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_running_button",
+                        "button_text": "Download 5K Plan",
+                        "button_color": "#DD6B20"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_mobility_button",
+                        "button_text": "Start Routine",
+                        "button_color": "#6B46C1"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>The deadlift is the king of compound movements. Stand with feet hip-width, grip the bar just outside your legs. Hinge at the hips, engage your core, and drive through your heels to stand.</p><p><strong>Sets & Reps:</strong> 3 sets of 5–6 reps for strength.</p><p><strong>Key tip:</strong> Keep your spine neutral throughout — never round your lower back under load.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_deadlift_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>Start with the run/walk method and build week by week:</p><ul><li><strong>Week 1:</strong> Run 1 min, walk 2 min — repeat 8x</li><li><strong>Week 2:</strong> Run 2 min, walk 2 min — repeat 6x</li><li><strong>Week 4:</strong> Run 5 min, walk 1 min — repeat 4x</li></ul><p><strong>Key tip:</strong> Run at a conversational pace — you should be able to talk while moving.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_running_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_yoga_button",
+                        "button_text": "Start Yoga Flow",
+                        "button_color": "#6B46C1"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_hiit_button",
+                        "button_text": "Start HIIT Session",
+                        "button_color": "#DD6B20"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>This workout alternates 40 seconds of effort with 20 seconds of rest. Complete 3 rounds of: Jump squats, Burpees, Mountain climbers, High knees, Push-ups, Lateral shuffles.</p><p><strong>Total time:</strong> ~30 minutes.</p><p><strong>Key tip:</strong> Keep intensity maximal during work intervals. No equipment needed — just bring the effort.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_hiit_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "fitness_protein_button",
+                        "button_text": "View All Recipes",
+                        "button_color": "#2F855A"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p>The bench press targets your chest, shoulders, and triceps. Lie flat, grip the bar slightly wider than shoulder-width. Lower the bar to mid-chest and press back up with control.</p><p><strong>Sets & Reps:</strong> 3–4 sets of 8–12 reps.</p><p><strong>Key tips:</strong> Keep your feet flat on the floor, avoid bouncing the bar, and maintain a slight arch in your lower back.</p>",
+                        "type": "text",
+                        "lookup_key": "fitness_bench_press_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        },
+        {
+            "display_name": "Content Details",
+            "entries": [
+                {
+                    "data": {
+                        "title": "Meal Prep 101",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>Dedicate 2 hours every Sunday to transform your week:</p><ol><li>Cook a large batch of protein (chicken, eggs, or tofu)</li><li>Prepare 2–3 complex carbs (rice, sweet potato, quinoa)</li><li>Roast a variety of vegetables</li><li>Portion into containers for 5 days</li></ol><p><strong>Key tip:</strong> Store proteins and carbs separately to maintain freshness and flexibility when building meals.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_meal_prep_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_meal_prep_button",
+                                    "button_text": "Get Recipes",
+                                    "button_color": "#2F855A"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "High-Protein Recipes",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>5 quick muscle-building meals under 15 minutes:</p><ol><li>Greek yogurt parfait — 30g protein</li><li>Chicken & rice bowl with veggies — 45g protein</li><li>Tuna avocado wrap — 35g protein</li><li>Egg white omelette with cottage cheese — 28g protein</li><li>Protein shake with oats and banana — 40g protein</li></ol>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_protein_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_protein_button",
+                                    "button_text": "View All Recipes",
+                                    "button_color": "#2F855A"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Morning Mobility Routine",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>10-minute morning sequence:</p><ol><li>Cat-Cow — 1 min</li><li>Hip circles — 1 min each side</li><li>World's Greatest Stretch — 2 min each side</li><li>Thoracic rotation — 1 min each side</li><li>Standing hamstring reach — 2 min</li></ol><p><strong>Key tip:</strong> Move slowly and with intention. Daily practice improves posture, reduces pain, and boosts energy.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_mobility_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_mobility_button",
+                                    "button_text": "Start Routine",
+                                    "button_color": "#6B46C1"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Jump Rope Cardio",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>Jump rope burns up to 15 calories per minute. Start with the basic two-foot bounce: 30 seconds on, 30 seconds rest for 10 rounds.</p><p><strong>Progression:</strong> Alternate feet for coordination, then advance to double-unders (rope passes twice per jump).</p><p><strong>Key tip:</strong> Always land softly on the balls of your feet to protect your joints.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_jump_rope_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_jump_rope_button",
+                                    "button_text": "Start Jumping",
+                                    "button_color": "#DD6B20"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Yoga for Athletes",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>Key poses for athletic performance (hold 30–60 sec each):</p><ul><li><strong>Downward Dog</strong> — stretches hamstrings and calves</li><li><strong>Pigeon Pose</strong> — releases hip flexors</li><li><strong>Warrior II</strong> — builds hip strength and balance</li><li><strong>Bridge Pose</strong> — activates glutes and spine</li><li><strong>Seated Forward Fold</strong> — deep hamstring release</li></ul><p>Practice 3–4x per week to reduce injury risk and accelerate recovery.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_yoga_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_yoga_button",
+                                    "button_text": "Start Yoga Flow",
+                                    "button_color": "#6B46C1"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Running for Beginners",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>Start with the run/walk method and build week by week:</p><ul><li><strong>Week 1:</strong> Run 1 min, walk 2 min — repeat 8x</li><li><strong>Week 2:</strong> Run 2 min, walk 2 min — repeat 6x</li><li><strong>Week 4:</strong> Run 5 min, walk 1 min — repeat 4x</li></ul><p><strong>Key tip:</strong> Run at a conversational pace — you should be able to talk while moving.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_running_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_running_button",
+                                    "button_text": "Download 5K Plan",
+                                    "button_color": "#DD6B20"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Pre & Post-Workout Nutrition",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Pre-workout (1–2 hrs before):</strong> Eat complex carbs + moderate protein. Try oats with banana or rice with chicken.</p><p><strong>Post-workout (within 30–60 min):</strong> Prioritize protein for muscle repair and fast carbs to replenish glycogen. Ideal: protein shake + fruit.</p><p><strong>Hydration:</strong> Drink 500ml of water before training and sip throughout your session.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_preworkout_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_preworkout_button",
+                                    "button_text": "Build Meal Plan",
+                                    "button_color": "#2F855A"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "30-Min HIIT Blast",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>This workout alternates 40 seconds of effort with 20 seconds of rest. Complete 3 rounds of: Jump squats, Burpees, Mountain climbers, High knees, Push-ups, Lateral shuffles.</p><p><strong>Total time:</strong> ~30 minutes.</p><p><strong>Key tip:</strong> Keep intensity maximal during work intervals. No equipment needed — just bring the effort.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_hiit_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_hiit_button",
+                                    "button_text": "Start HIIT Session",
+                                    "button_color": "#DD6B20"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Back Squat Technique",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>Position the bar across your upper traps. Stand feet shoulder-width, toes slightly out. Break at the hips and knees simultaneously, sit back and down until thighs are parallel to the floor.</p><p><strong>Sets & Reps:</strong> 4 sets of 6–8 reps.</p><p><strong>Key tip:</strong> Prioritize depth over load — proper squat depth recruits glutes, quads, and hamstrings fully.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_squat_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_squat_button",
+                                    "button_text": "View Full Routine",
+                                    "button_color": "#E53E3E"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Deadlift Mastery",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>The deadlift is the king of compound movements. Stand with feet hip-width, grip the bar just outside your legs. Hinge at the hips, engage your core, and drive through your heels to stand.</p><p><strong>Sets & Reps:</strong> 3 sets of 5–6 reps for strength.</p><p><strong>Key tip:</strong> Keep your spine neutral throughout — never round your lower back under load.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_deadlift_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_deadlift_button",
+                                    "button_text": "Watch Form Guide",
+                                    "button_color": "#E53E3E"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Bench Press Fundamentals",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p></p>",
+                                    "type": "image",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_bench_press_image",
+                                    "button_text": null,
+                                    "banner_image": "bc517b79-1584-4b61-a003-9e39340cb31d.jpeg",
+                                    "banner_video": null,
+                                    "button_color": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p>The bench press targets your chest, shoulders, and triceps. Lie flat, grip the bar slightly wider than shoulder-width. Lower the bar to mid-chest and press back up with control.</p><p><strong>Sets & Reps:</strong> 3–4 sets of 8–12 reps.</p><p><strong>Key tips:</strong> Keep your feet flat on the floor, avoid bouncing the bar, and maintain a slight arch in your lower back.</p>",
+                                    "type": "text",
+                                    "lookup_key": "fitness_bench_press_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "fitness_bench_press_button",
+                                    "button_text": "Start Training",
+                                    "button_color": "#E53E3E"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        }
+    ]
+}

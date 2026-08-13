@@ -1,0 +1,1096 @@
+{
+    "content_types": [
+        {
+            "display_name": "Carousel items",
+            "entries": [
+                {
+                    "data": {
+                        "badge": "FAMILY",
+                        "image": "9fc6e3c1-0bd0-4333-9435-e95dd420866a.webp",
+                        "title": "How to Train Your Dragon",
+                        "subtitle": "The live-action adaptation of the classic that won millions of hearts.",
+                        "lookup_key": "movie_how_to_train_dragon",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "How to Train Your Dragon",
+                                "content": [
+                                    "019fecfc-43ee-71b9-b2b6-e39dbe8da0ea",
+                                    "019fecfc-4405-7279-a549-f3c3ef980467"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "COMEDY",
+                        "image": "3c1a50c8-ba1f-417a-af74-e602bdc29b21.webp",
+                        "title": "Nonnas",
+                        "subtitle": "The Italian grandmothers revolutionizing a New York restaurant.",
+                        "lookup_key": "movie_nonnas",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "Nonnas",
+                                "content": [
+                                    "019fecfc-43a9-7069-9d67-458d3add3ac9",
+                                    "019fecfc-43c2-7298-a1a8-74b2bc1017d0"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "ANIMATION",
+                        "image": "70f4f349-de66-4ef8-a178-0524a72c88fd.jpg",
+                        "title": "The Bad Guys 2",
+                        "subtitle": "The baddest gang is back with bold new schemes.",
+                        "lookup_key": "movie_bad_guys_2",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "The Bad Guys 2",
+                                "content": [
+                                    "019fecfc-441d-702f-bd45-274b451c412d",
+                                    "019fecfc-443e-73c2-a574-f560fde9f306"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "DRAMA",
+                        "image": "c6769052-e8f8-4d60-9e16-928eff85bc3d.jpg",
+                        "title": "The Phoenician Scheme",
+                        "subtitle": "Intrigue, secrets, and life-changing decisions in Wes Anderson's most ambitious film.",
+                        "lookup_key": "movie_phoenician_scheme",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "The Phoenician Scheme",
+                                "content": [
+                                    "019fecfc-432e-7110-941b-e9e3c0ae060a",
+                                    "019fecfc-4374-71de-8bbd-c57a939354e3"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "DRAMA",
+                        "image": "70d2efea-008c-4d1d-baa9-5adec1458ec6.jpg",
+                        "title": "Materialists",
+                        "subtitle": "A love story unfolding in the city that never sleeps.",
+                        "lookup_key": "movie_materialists",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "Materialists",
+                                "content": [
+                                    "019fecfc-42fb-7329-93bb-57416791fd74",
+                                    "019fecfc-4315-72b8-a866-b926ce26d621"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "DC",
+                        "image": "8161a432-d1c5-42d8-825f-bab662c44049.jpg",
+                        "title": "Superman",
+                        "subtitle": "The Man of Steel returns more powerful than ever in the new DCU.",
+                        "lookup_key": "movie_superman",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "Superman",
+                                "content": [
+                                    "019fecfc-4295-72ff-91e2-dbb6998f3cab",
+                                    "019fecfc-42ae-73a8-a9a6-bc4de847c997"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "ACTION",
+                        "image": "46a15aea-9dc0-46c2-873f-5cdc69481aeb.webp",
+                        "title": "Thunderbolts*",
+                        "subtitle": "A team of antiheroes assembles to save a world that doesn't trust them.",
+                        "lookup_key": "movie_thunderbolts",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "Thunderbolts*",
+                                "content": [
+                                    "019fecfc-422a-72a3-9518-c62c201a47f1",
+                                    "019fecfc-427e-7090-bb0f-61c13c2f077d"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "ACTION",
+                        "image": "7cd0ebba-4595-4270-ac85-e8c6592f5e23.jpg",
+                        "title": "Mission: Impossible — The Final Reckoning",
+                        "subtitle": "Ethan Hunt's most dangerous mission comes to an epic end.",
+                        "lookup_key": "movie_mission_impossible",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "Mission: Impossible — The Final Reckoning",
+                                "content": [
+                                    "019fecfc-415e-7130-b79d-016346fb8276",
+                                    "019fecfc-41b1-7214-a0e5-e87feb8981b5"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "HORROR",
+                        "image": "c197b044-2a47-4456-8342-72154417c0b7.webp",
+                        "title": "Final Destination: Bloodlines",
+                        "subtitle": "Death has a plan, and no one in the family can escape.",
+                        "lookup_key": "movie_final_destination",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "Final Destination: Bloodlines",
+                                "content": [
+                                    "019fecfc-42c9-70ca-99f3-39002b16df1b",
+                                    "019fecfc-42e2-73be-97db-2612315b1547"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "ACTION",
+                        "image": "40b0a6b8-872c-4561-8375-4228696d4e5b.jpeg",
+                        "title": "Jurassic World: Rebirth",
+                        "subtitle": "A new era of dinosaurs begins in 2025.",
+                        "lookup_key": "movie_jurassic_world",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "Jurassic World: Rebirth",
+                                "content": [
+                                    "019fed17-d193-70fc-81ae-70324850f330",
+                                    "019fecfc-41fb-7231-86f9-1040112dd231",
+                                    "019fecfc-4214-71d6-adc7-4a6219a61a59"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "MARVEL",
+                        "image": "29672d1a-2ed8-442c-a5e8-10c12ee71cd5.webp",
+                        "title": "The Fantastic Four: First Steps",
+                        "subtitle": "Earth's greatest heroes make their MCU debut in a retro-futuristic adventure.",
+                        "lookup_key": "movie_fantastic_four",
+                        "content_detail": {
+                            "_content_type": "content_details",
+                            "data": {
+                                "title": "The Fantastic Four: First Steps",
+                                "content": [
+                                    "019fecfc-41c9-7084-9185-6ec090d21a7c",
+                                    "019fecfc-41e2-71e8-a8ae-b47f57760e7c"
+                                ]
+                            },
+                            "status": "draft",
+                            "locale": "en"
+                        }
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        },
+        {
+            "display_name": "Feed Carousel",
+            "entries": [
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Drama & Comedy",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "DRAMA",
+                                    "image": "70d2efea-008c-4d1d-baa9-5adec1458ec6.jpg",
+                                    "title": "Materialists",
+                                    "subtitle": "A love story unfolding in the city that never sleeps.",
+                                    "lookup_key": "movie_materialists",
+                                    "content_detail": "019fecfc-e0d6-715f-ab85-1b158149812d"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "DRAMA",
+                                    "image": "c6769052-e8f8-4d60-9e16-928eff85bc3d.jpg",
+                                    "title": "The Phoenician Scheme",
+                                    "subtitle": "Intrigue, secrets, and life-changing decisions in Wes Anderson's most ambitious film.",
+                                    "lookup_key": "movie_phoenician_scheme",
+                                    "content_detail": "019fecfc-e0f1-7022-ab0f-58d001375526"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "COMEDY",
+                                    "image": "3c1a50c8-ba1f-417a-af74-e602bdc29b21.webp",
+                                    "title": "Nonnas",
+                                    "subtitle": "The Italian grandmothers revolutionizing a New York restaurant.",
+                                    "lookup_key": "movie_nonnas",
+                                    "content_detail": "019fecfc-e112-70e3-b63e-3400c5231e17"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Stories that make you laugh, cry, and think.",
+                        "card_type": "small",
+                        "lookup_key": "movies_drama_section",
+                        "display_order": 4,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "New Releases",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "ACTION",
+                                    "image": "40b0a6b8-872c-4561-8375-4228696d4e5b.jpeg",
+                                    "title": "Jurassic World: Rebirth",
+                                    "subtitle": "A new era of dinosaurs begins in 2025.",
+                                    "lookup_key": "movie_jurassic_world",
+                                    "content_detail": "019fecfc-e064-708f-b400-674c7543d0f4"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Just arrived in theaters this week.",
+                        "card_type": "large",
+                        "lookup_key": "movies_new_releases_section",
+                        "display_order": 3,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Action & Adventure",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "ACTION",
+                                    "image": "46a15aea-9dc0-46c2-873f-5cdc69481aeb.webp",
+                                    "title": "Thunderbolts*",
+                                    "subtitle": "A team of antiheroes assembles to save a world that doesn't trust them.",
+                                    "lookup_key": "movie_thunderbolts",
+                                    "content_detail": "019fecfc-e089-7009-a25e-4cba1f5d028e"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "DC",
+                                    "image": "8161a432-d1c5-42d8-825f-bab662c44049.jpg",
+                                    "title": "Superman",
+                                    "subtitle": "The Man of Steel returns more powerful than ever in the new DCU.",
+                                    "lookup_key": "movie_superman",
+                                    "content_detail": "019fecfc-e0a2-7375-b136-a90813f648c1"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "HORROR",
+                                    "image": "c197b044-2a47-4456-8342-72154417c0b7.webp",
+                                    "title": "Final Destination: Bloodlines",
+                                    "subtitle": "Death has a plan, and no one in the family can escape.",
+                                    "lookup_key": "movie_final_destination",
+                                    "content_detail": "019fecfc-e0bc-722f-bd49-42a86c18858d"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "Pure adrenaline on the big screen.",
+                        "card_type": "small",
+                        "lookup_key": "movies_action_section",
+                        "display_order": 2,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": "CINEMA",
+                        "image": null,
+                        "title": "Now Showing",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "ACTION",
+                                    "image": "7cd0ebba-4595-4270-ac85-e8c6592f5e23.jpg",
+                                    "title": "Mission: Impossible — The Final Reckoning",
+                                    "subtitle": "Ethan Hunt's most dangerous mission comes to an epic end.",
+                                    "lookup_key": "movie_mission_impossible",
+                                    "content_detail": "019fecfc-dff6-7152-8d09-2a0ccc6a35eb"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "MARVEL",
+                                    "image": "29672d1a-2ed8-442c-a5e8-10c12ee71cd5.webp",
+                                    "title": "The Fantastic Four: First Steps",
+                                    "subtitle": "Earth's greatest heroes make their MCU debut in a retro-futuristic adventure.",
+                                    "lookup_key": "movie_fantastic_four",
+                                    "content_detail": "019fecfc-e04b-717e-b31c-12cc9f1b0bb1"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "The best films of 2025, now on the big screen.",
+                        "card_type": "featured",
+                        "lookup_key": "movies_featured_banner",
+                        "display_order": 1,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "badge": null,
+                        "image": null,
+                        "title": "Animation & Family",
+                        "content": null,
+                        "carousel": [
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "FAMILY",
+                                    "image": "9fc6e3c1-0bd0-4333-9435-e95dd420866a.webp",
+                                    "title": "How to Train Your Dragon",
+                                    "subtitle": "The live-action adaptation of the classic that won millions of hearts.",
+                                    "lookup_key": "movie_how_to_train_dragon",
+                                    "content_detail": "019fecfc-e130-73fa-986e-67214b848f25"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "carousel_items",
+                                "data": {
+                                    "badge": "ANIMATION",
+                                    "image": "70f4f349-de66-4ef8-a178-0524a72c88fd.jpg",
+                                    "title": "The Bad Guys 2",
+                                    "subtitle": "The baddest gang is back with bold new schemes.",
+                                    "lookup_key": "movie_bad_guys_2",
+                                    "content_detail": "019fecfc-e149-73db-92e8-c12d0fb08fd7"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ],
+                        "subtitle": "For everyone to enjoy, no matter the age.",
+                        "card_type": "small",
+                        "lookup_key": "movies_family_section",
+                        "display_order": 5,
+                        "is_collection": true
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        },
+        {
+            "display_name": "Content Detail Items",
+            "entries": [
+                {
+                    "data": {
+                        "text": "<p></p>",
+                        "type": "image",
+                        "button_url": null,
+                        "lookup_key": "movie_jurassic_world_image",
+                        "button_text": null,
+                        "banner_image": "2436dff4-cae5-4771-9114-089388e76c3d.jpeg",
+                        "banner_video": null,
+                        "button_color": null
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_mission_impossible_btn",
+                        "button_text": "Buy Tickets",
+                        "button_color": "#E53E3E"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_fantastic_four_btn",
+                        "button_text": "Check Showtimes",
+                        "button_color": "#CC0000"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_final_destination_btn",
+                        "button_text": "Check Showtimes",
+                        "button_color": "#8B0000"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_nonnas_btn",
+                        "button_text": "Buy Tickets",
+                        "button_color": "#C0392B"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_bad_guys_2_btn",
+                        "button_text": "Buy Tickets",
+                        "button_color": "#E67E22"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Pierre Perifel &nbsp;|&nbsp; <strong>Duration:</strong> 96 min &nbsp;|&nbsp; <strong>Rating:</strong> PG</p><p>Mr. Wolf, Mr. Shark, and the rest of the gang are back. After turning heroes, a new villain forces them back into their old dangerous ways.</p><p><strong>Cast:</strong> Sam Rockwell, Marc Maron, Awkwafina, Anthony Ramos</p>",
+                        "type": "text",
+                        "lookup_key": "movie_bad_guys_2_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_dragon_btn",
+                        "button_text": "Check Showtimes",
+                        "button_color": "#2980B9"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Dean DeBlois &nbsp;|&nbsp; <strong>Duration:</strong> 125 min &nbsp;|&nbsp; <strong>Rating:</strong> PG</p><p>The live-action adaptation of DreamWorks' beloved animated classic follows Hiccup, a young Viking who forms an unlikely friendship with Toothless, a Night Fury dragon.</p><p><strong>Cast:</strong> Mason Thames, Nico Parker, Gerard Butler, Cate Blanchett</p>",
+                        "type": "text",
+                        "lookup_key": "movie_dragon_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Stephen Chbosky &nbsp;|&nbsp; <strong>Duration:</strong> 108 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>Based on the true story of Joe Scaravella, who transformed a modest Staten Island restaurant into a culinary destination by hiring Italian grandmothers as star chefs.</p><p><strong>Cast:</strong> Vince Vaughn, Lorraine Bracco, Linda Cardellini</p>",
+                        "type": "text",
+                        "lookup_key": "movie_nonnas_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_phoenician_scheme_btn",
+                        "button_text": "Check Showtimes",
+                        "button_color": "#C09A10"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Wes Anderson &nbsp;|&nbsp; <strong>Duration:</strong> 102 min &nbsp;|&nbsp; <strong>Rating:</strong> PG</p><p>An eccentric tycoon is contacted by his illegitimate son while planning a series of business ventures across the Middle East. Wes Anderson's signature visual style in his most intricate story yet.</p><p><strong>Cast:</strong> Benicio del Toro, Michael Cera, Scarlett Johansson, Tom Hanks</p>",
+                        "type": "text",
+                        "lookup_key": "movie_phoenician_scheme_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_materialists_btn",
+                        "button_text": "Buy Tickets",
+                        "button_color": "#9B2D7A"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Celine Song &nbsp;|&nbsp; <strong>Duration:</strong> 116 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>An elite matchmaker in New York is torn between her ex and a new love while questioning her own beliefs about relationships and money in the city that never sleeps.</p><p><strong>Cast:</strong> Dakota Johnson, Pedro Pascal, Chris Evans</p>",
+                        "type": "text",
+                        "lookup_key": "movie_materialists_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Zach Lipovsky &nbsp;|&nbsp; <strong>Duration:</strong> 110 min &nbsp;|&nbsp; <strong>Rating:</strong> R</p><p>A young woman discovers her grandmother survived a disaster decades ago by cheating death. Now death comes to collect its debt from the entire family. The franchise returns more intense than ever.</p><p><strong>Cast:</strong> Brec Bassinger, Teo Briones, Rya Kihlstedt</p>",
+                        "type": "text",
+                        "lookup_key": "movie_final_destination_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_superman_btn",
+                        "button_text": "Buy Tickets",
+                        "button_color": "#1A3ABA"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> James Gunn &nbsp;|&nbsp; <strong>Duration:</strong> 132 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>The first film of the new DCU introduces Clark Kent balancing life as a journalist and superhero while facing threats that endanger all of humanity.</p><p><strong>Cast:</strong> David Corenswet, Rachel Brosnahan, Nicholas Hoult, Edi Gathegi</p>",
+                        "type": "text",
+                        "lookup_key": "movie_superman_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_thunderbolts_btn",
+                        "button_text": "Check Showtimes",
+                        "button_color": "#4A4A8A"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Jake Schreier &nbsp;|&nbsp; <strong>Duration:</strong> 127 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>A group of antiheroes and reformed villains is recruited for a secret mission. Yelena Belova, John Walker, Ghost, and Taskmaster form the MCU's most unexpected team.</p><p><strong>Cast:</strong> Florence Pugh, David Harbour, Wyatt Russell, Hannah John-Kamen</p>",
+                        "type": "text",
+                        "lookup_key": "movie_thunderbolts_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "type": "button",
+                        "button_url": null,
+                        "lookup_key": "movie_jurassic_world_btn",
+                        "button_text": "Buy Tickets",
+                        "button_color": "#1A7A3E"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Gareth Edwards &nbsp;|&nbsp; <strong>Duration:</strong> 118 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>Five years after Jurassic World Dominion, a new expedition ventures into a remote island where dinosaurs have evolved in surprising and dangerous ways.</p><p><strong>Cast:</strong> Scarlett Johansson, Jonathan Bailey, Mahershala Ali</p>",
+                        "type": "text",
+                        "lookup_key": "movie_jurassic_world_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Matt Shakman &nbsp;|&nbsp; <strong>Duration:</strong> 130 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>Reed Richards, Sue Storm, Johnny Storm, and Ben Grimm make their MCU debut in a retro-futuristic 1960s adventure. Earth's most fantastic four face an unimaginable cosmic threat.</p><p><strong>Cast:</strong> Pedro Pascal, Vanessa Kirby, Joseph Quinn, Ebon Moss-Bachrach</p>",
+                        "type": "text",
+                        "lookup_key": "movie_fantastic_four_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "text": "<p><strong>Director:</strong> Christopher McQuarrie &nbsp;|&nbsp; <strong>Duration:</strong> 169 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>Ethan Hunt and the IMF team face their greatest challenge yet when a rogue AI known as The Entity threatens to destroy world order. The final battle has arrived.</p><p><strong>Cast:</strong> Tom Cruise, Hayley Atwell, Ving Rhames, Simon Pegg</p>",
+                        "type": "text",
+                        "lookup_key": "movie_mission_impossible_text"
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        },
+        {
+            "display_name": "Content Details",
+            "entries": [
+                {
+                    "data": {
+                        "title": "The Bad Guys 2",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Pierre Perifel &nbsp;|&nbsp; <strong>Duration:</strong> 96 min &nbsp;|&nbsp; <strong>Rating:</strong> PG</p><p>Mr. Wolf, Mr. Shark, and the rest of the gang are back. After turning heroes, a new villain forces them back into their old dangerous ways.</p><p><strong>Cast:</strong> Sam Rockwell, Marc Maron, Awkwafina, Anthony Ramos</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_bad_guys_2_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_bad_guys_2_btn",
+                                    "button_text": "Buy Tickets",
+                                    "button_color": "#E67E22"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "How to Train Your Dragon",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Dean DeBlois &nbsp;|&nbsp; <strong>Duration:</strong> 125 min &nbsp;|&nbsp; <strong>Rating:</strong> PG</p><p>The live-action adaptation of DreamWorks' beloved animated classic follows Hiccup, a young Viking who forms an unlikely friendship with Toothless, a Night Fury dragon.</p><p><strong>Cast:</strong> Mason Thames, Nico Parker, Gerard Butler, Cate Blanchett</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_dragon_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_dragon_btn",
+                                    "button_text": "Check Showtimes",
+                                    "button_color": "#2980B9"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Nonnas",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Stephen Chbosky &nbsp;|&nbsp; <strong>Duration:</strong> 108 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>Based on the true story of Joe Scaravella, who transformed a modest Staten Island restaurant into a culinary destination by hiring Italian grandmothers as star chefs.</p><p><strong>Cast:</strong> Vince Vaughn, Lorraine Bracco, Linda Cardellini</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_nonnas_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_nonnas_btn",
+                                    "button_text": "Buy Tickets",
+                                    "button_color": "#C0392B"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "The Phoenician Scheme",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Wes Anderson &nbsp;|&nbsp; <strong>Duration:</strong> 102 min &nbsp;|&nbsp; <strong>Rating:</strong> PG</p><p>An eccentric tycoon is contacted by his illegitimate son while planning a series of business ventures across the Middle East. Wes Anderson's signature visual style in his most intricate story yet.</p><p><strong>Cast:</strong> Benicio del Toro, Michael Cera, Scarlett Johansson, Tom Hanks</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_phoenician_scheme_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_phoenician_scheme_btn",
+                                    "button_text": "Check Showtimes",
+                                    "button_color": "#C09A10"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Materialists",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Celine Song &nbsp;|&nbsp; <strong>Duration:</strong> 116 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>An elite matchmaker in New York is torn between her ex and a new love while questioning her own beliefs about relationships and money in the city that never sleeps.</p><p><strong>Cast:</strong> Dakota Johnson, Pedro Pascal, Chris Evans</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_materialists_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_materialists_btn",
+                                    "button_text": "Buy Tickets",
+                                    "button_color": "#9B2D7A"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Final Destination: Bloodlines",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Zach Lipovsky &nbsp;|&nbsp; <strong>Duration:</strong> 110 min &nbsp;|&nbsp; <strong>Rating:</strong> R</p><p>A young woman discovers her grandmother survived a disaster decades ago by cheating death. Now death comes to collect its debt from the entire family. The franchise returns more intense than ever.</p><p><strong>Cast:</strong> Brec Bassinger, Teo Briones, Rya Kihlstedt</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_final_destination_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_final_destination_btn",
+                                    "button_text": "Check Showtimes",
+                                    "button_color": "#8B0000"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Superman",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> James Gunn &nbsp;|&nbsp; <strong>Duration:</strong> 132 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>The first film of the new DCU introduces Clark Kent balancing life as a journalist and superhero while facing threats that endanger all of humanity.</p><p><strong>Cast:</strong> David Corenswet, Rachel Brosnahan, Nicholas Hoult, Edi Gathegi</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_superman_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_superman_btn",
+                                    "button_text": "Buy Tickets",
+                                    "button_color": "#1A3ABA"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Thunderbolts*",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Jake Schreier &nbsp;|&nbsp; <strong>Duration:</strong> 127 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>A group of antiheroes and reformed villains is recruited for a secret mission. Yelena Belova, John Walker, Ghost, and Taskmaster form the MCU's most unexpected team.</p><p><strong>Cast:</strong> Florence Pugh, David Harbour, Wyatt Russell, Hannah John-Kamen</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_thunderbolts_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_thunderbolts_btn",
+                                    "button_text": "Check Showtimes",
+                                    "button_color": "#4A4A8A"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Jurassic World: Rebirth",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p></p>",
+                                    "type": "image",
+                                    "button_url": null,
+                                    "lookup_key": "movie_jurassic_world_image",
+                                    "button_text": null,
+                                    "banner_image": "2436dff4-cae5-4771-9114-089388e76c3d.jpeg",
+                                    "banner_video": null,
+                                    "button_color": null
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Gareth Edwards &nbsp;|&nbsp; <strong>Duration:</strong> 118 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>Five years after Jurassic World Dominion, a new expedition ventures into a remote island where dinosaurs have evolved in surprising and dangerous ways.</p><p><strong>Cast:</strong> Scarlett Johansson, Jonathan Bailey, Mahershala Ali</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_jurassic_world_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_jurassic_world_btn",
+                                    "button_text": "Buy Tickets",
+                                    "button_color": "#1A7A3E"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "The Fantastic Four: First Steps",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Matt Shakman &nbsp;|&nbsp; <strong>Duration:</strong> 130 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>Reed Richards, Sue Storm, Johnny Storm, and Ben Grimm make their MCU debut in a retro-futuristic 1960s adventure. Earth's most fantastic four face an unimaginable cosmic threat.</p><p><strong>Cast:</strong> Pedro Pascal, Vanessa Kirby, Joseph Quinn, Ebon Moss-Bachrach</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_fantastic_four_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_fantastic_four_btn",
+                                    "button_text": "Check Showtimes",
+                                    "button_color": "#CC0000"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                },
+                {
+                    "data": {
+                        "title": "Mission: Impossible — The Final Reckoning",
+                        "content": [
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "text": "<p><strong>Director:</strong> Christopher McQuarrie &nbsp;|&nbsp; <strong>Duration:</strong> 169 min &nbsp;|&nbsp; <strong>Rating:</strong> PG-13</p><p>Ethan Hunt and the IMF team face their greatest challenge yet when a rogue AI known as The Entity threatens to destroy world order. The final battle has arrived.</p><p><strong>Cast:</strong> Tom Cruise, Hayley Atwell, Ving Rhames, Simon Pegg</p>",
+                                    "type": "text",
+                                    "lookup_key": "movie_mission_impossible_text"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            },
+                            {
+                                "_content_type": "content_detail_items",
+                                "data": {
+                                    "type": "button",
+                                    "button_url": null,
+                                    "lookup_key": "movie_mission_impossible_btn",
+                                    "button_text": "Buy Tickets",
+                                    "button_color": "#E53E3E"
+                                },
+                                "status": "draft",
+                                "locale": "en"
+                            }
+                        ]
+                    },
+                    "status": "draft",
+                    "locale": "en"
+                }
+            ]
+        }
+    ]
+}
