@@ -9,6 +9,7 @@ const List<_Tab> _kTabs = [
   (icon: Icons.folder_outlined, activeIcon: Icons.folder, label: 'Resources'),
   (icon: Icons.notifications_outlined, activeIcon: Icons.notifications, label: 'Notifications'),
   (icon: Icons.info_outline, activeIcon: Icons.info, label: 'About'),
+  (icon: Icons.person_outline, activeIcon: Icons.person, label: 'Profile'),
 ];
 
 class AnimatedBottomTabBar extends StatelessWidget {

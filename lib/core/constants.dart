@@ -28,3 +28,9 @@ class AppLayout {
 class NotificationRoute {
   static const String contentDetail = 'content_detail';
 }
+
+class AuthConstants {
+  static const String usersTable = 'users';
+  static const int sessionExpiryDays = 30;
+  static const String sessionInstalledKey = '@session_installed';
+}

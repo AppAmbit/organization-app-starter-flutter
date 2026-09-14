@@ -72,6 +72,10 @@ class NotificationsRepository {
     return items;
   }
 
+  Future<void> clear() async {
+    await LocalStorageService.setStringList(_key, []);
+  }
+
   Future<List<NotificationModel>> _persist(List<NotificationModel> items) async {
     items.sort((a, b) => b.receivedAt.compareTo(a.receivedAt));
     final capped =
